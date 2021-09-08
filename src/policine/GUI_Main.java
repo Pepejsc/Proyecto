@@ -1,16 +1,29 @@
 package policine;
 
+import java.awt.Image;
+import java.io.IOException;
+import java.net.URL;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author E2
  */
-
-
 public class GUI_Main extends javax.swing.JFrame {
 
     /**
      * Creates new form GUI_Main
      */
+    String accion[] = {"/imagenes/p1.jpg", "/imagenes/p2.jpg", "/imagenes/p3.jpg", "/imagenes/p4.jpg", "/imagenes/p5.jpg", "/imagenes/p6.jpg","/imagenes/p7.jpg","/imagenes/p8.jpg"};
+    String drama[] = {"/imagenes/d1.jpg", "/imagenes/d2.jpg", "/imagenes/d3.jpg", "/imagenes/d4.jpg", "/imagenes/d5.jpg", "/imagenes/d6.jpg","/imagenes/d7.jpg","/imagenes/d8.jpg"};
+    String terror[] = {"/imagenes/t1.jpg", "/imagenes/t2.jpg", "/imagenes/t3.jpg", "/imagenes/t4.jpg", "/imagenes/t5.jpg", "/imagenes/t6.jpg","/imagenes/t7.jpg","/imagenes/t8.jpg"};
+    String suspenso[] = {"/imagenes/s1.jpg", "/imagenes/s2.jpg", "/imagenes/s3.jpg", "/imagenes/s4.jpg", "/imagenes/s5.jpg", "/imagenes/s6.jpg","/imagenes/s7.jpg","/imagenes/s8.jpg"};
+    String aventura[] = {"/imagenes/a1.jpg", "/imagenes/a2.jpg", "/imagenes/a3.jpg", "/imagenes/a4.jpg", "/imagenes/a5.jpg", "/imagenes/a6.jpg","/imagenes/a7.jpg","/imagenes/a8.jpg"};
+    String ciencia[] = {"/imagenes/c1.jpg", "/imagenes/c2.jpg", "/imagenes/c3.jpg", "/imagenes/c4.jpg", "/imagenes/c5.jpg", "/imagenes/c6.jpg","/imagenes/c7.jpg","/imagenes/c8.jpg"};
+    String musical[] = {"/imagenes/m1.jpeg", "/imagenes/m2.jpg", "/imagenes/m3.jpg", "/imagenes/m4.jpg", "/imagenes/m5.jpg", "/imagenes/m6.jpg","/imagenes/m7.jpg","/imagenes/m8.jpg"};
+    String infantil[] = {"/imagenes/i1.jpg", "/imagenes/i2.png", "/imagenes/i3.jpg", "/imagenes/i4.jpg", "/imagenes/i5.jpg", "/imagenes/i6.jpg","/imagenes/i7.jpg","/imagenes/i8.jpg"};
+
     public GUI_Main() {
         initComponents();
         setLocationRelativeTo(null);
@@ -29,14 +42,14 @@ public class GUI_Main extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jblV2 = new javax.swing.JLabel();
+        jblV3 = new javax.swing.JLabel();
+        jblV5 = new javax.swing.JLabel();
+        jblV1 = new javax.swing.JLabel();
+        jblV6 = new javax.swing.JLabel();
+        jblV7 = new javax.swing.JLabel();
+        jblV4 = new javax.swing.JLabel();
+        jblV8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,29 +69,29 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/c1.jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
+        jblV2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/c1.jpg"))); // NOI18N
+        jPanel1.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/d1.jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
+        jblV3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/d1.jpg"))); // NOI18N
+        jPanel1.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/p1.jpg"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, 150));
+        jblV5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/p1.jpg"))); // NOI18N
+        jPanel1.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, 150));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
+        jblV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.jpg"))); // NOI18N
+        jPanel1.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/s1.jpg"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 150));
+        jblV6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/s1.jpg"))); // NOI18N
+        jPanel1.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 150));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/t1.jpg"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 100, 150));
+        jblV7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/t1.jpg"))); // NOI18N
+        jPanel1.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 100, 150));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/i1.jpg"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
+        jblV4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/i1.jpg"))); // NOI18N
+        jPanel1.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/m2.jpg"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 100, 150));
+        jblV8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/m2.jpg"))); // NOI18N
+        jPanel1.add(jblV8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 100, 150));
 
         jTabbedPane1.addTab("Inicio", jPanel1);
 
@@ -118,6 +131,240 @@ public class GUI_Main extends javax.swing.JFrame {
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         // TODO add your handling code here:
         String genero = (String) jComboBox1.getSelectedItem();
+        switch (genero) {
+            case "Acción":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(accion[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(accion[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(accion[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(accion[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(accion[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(accion[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(accion[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Drama": 
+                try {
+                        URL url = this.getClass().getResource(drama[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(drama[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(drama[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(drama[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(drama[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(drama[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(drama[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(drama[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Terror":
+                try {
+                        URL url = this.getClass().getResource(terror[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(terror[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(terror[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(terror[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(terror[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(terror[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(terror[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(terror[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Suspenso":
+                try {
+                        URL url = this.getClass().getResource(suspenso[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(suspenso[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(suspenso[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(suspenso[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(suspenso[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(suspenso[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(suspenso[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(suspenso[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Aventura":
+                try {
+                        URL url = this.getClass().getResource(aventura[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(aventura[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(aventura[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(aventura[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(aventura[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(aventura[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(aventura[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(aventura[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Ciencia Ficción":
+                try {
+                        URL url = this.getClass().getResource(ciencia[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(ciencia[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(ciencia[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(ciencia[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(ciencia[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(ciencia[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(ciencia[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(ciencia[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Musical":
+                try {
+                        URL url = this.getClass().getResource(musical[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(musical[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(musical[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(musical[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(musical[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(musical[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(musical[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(musical[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Infantil":
+                try {
+                        URL url = this.getClass().getResource(infantil[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(infantil[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblV2.setIcon(new ImageIcon(img2));
+                        url = this.getClass().getResource(infantil[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblV3.setIcon(new ImageIcon(img3));
+                        url = this.getClass().getResource(infantil[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblV4.setIcon(new ImageIcon(img4));
+                        url = this.getClass().getResource(infantil[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblV5.setIcon(new ImageIcon(img5));
+                        url = this.getClass().getResource(infantil[5]);
+                        Image img6 = ImageIO.read(url);                                
+                        jblV6.setIcon(new ImageIcon(img6));
+                        url = this.getClass().getResource(infantil[6]);
+                        Image img7 = ImageIO.read(url);                                
+                        jblV7.setIcon(new ImageIcon(img7));
+                        url = this.getClass().getResource(infantil[7]);
+                        Image img8 = ImageIO.read(url);                                
+                        jblV8.setIcon(new ImageIcon(img8));
+                    } catch (Exception e) {
+                    }
+                break;
+        }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**
@@ -158,16 +405,16 @@ public class GUI_Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    public javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel jblV1;
+    public javax.swing.JLabel jblV2;
+    private javax.swing.JLabel jblV3;
+    private javax.swing.JLabel jblV4;
+    private javax.swing.JLabel jblV5;
+    private javax.swing.JLabel jblV6;
+    private javax.swing.JLabel jblV7;
+    private javax.swing.JLabel jblV8;
     // End of variables declaration//GEN-END:variables
 }

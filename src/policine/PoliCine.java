@@ -28,17 +28,17 @@ public class PoliCine {
                     case 0:
                         contador = 1 ;
                         icono =  new ImageIcon(getClass().getResource("/imagenes/t1.jpg"));
-                        principal.jLabel3.setIcon(icono);
+                        principal.jblV2.setIcon(icono);
                         break;
                     case 1:
                         contador = 2 ;
                         icono =  new ImageIcon(getClass().getResource("/imagenes/t2.jpg"));
-                        principal.jLabel3.setIcon(icono);
+                        principal.jblV2.setIcon(icono);
                         break;
                     case 2 :
                         contador = 0 ;
                         icono =  new ImageIcon(getClass().getResource("/imagenes/t3.jpg"));
-                        principal.jLabel3.setIcon(icono);
+                        principal.jblV2.setIcon(icono);
                         break;
                 }
             }
