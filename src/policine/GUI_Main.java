@@ -124,7 +124,7 @@ public class GUI_Main extends javax.swing.JFrame {
         jLabel1.setText("Genero:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 31, 80, 27));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acción", "Drama", "Terror", "Suspenso", "Aventura", "Ciencia Ficción", "Musical", "Infantil" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija una opción ----------", "Acción", "Drama", "Terror", "Suspenso", "Aventura", "Ciencia Ficción", "Musical", "Infantil" }));
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 jComboBox1ItemStateChanged(evt);
@@ -260,7 +260,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirCanguil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirCanguil.setBorderPainted(false);
         btnDisminuirCanguil.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirCanguil.setDisabledSelectedIcon(null);
         btnDisminuirCanguil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirCanguilActionPerformed(evt);
@@ -270,7 +269,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirNachos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirNachos.setBorderPainted(false);
         btnDisminuirNachos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirNachos.setDisabledSelectedIcon(null);
         btnDisminuirNachos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirNachosActionPerformed(evt);
@@ -280,7 +278,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirPapas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirPapas.setBorderPainted(false);
         btnDisminuirPapas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirPapas.setDisabledSelectedIcon(null);
         btnDisminuirPapas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirPapasActionPerformed(evt);
@@ -290,7 +287,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirHotDog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirHotDog.setBorderPainted(false);
         btnDisminuirHotDog.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirHotDog.setDisabledSelectedIcon(null);
         btnDisminuirHotDog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirHotDogActionPerformed(evt);
@@ -300,7 +296,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirKFC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirKFC.setBorderPainted(false);
         btnDisminuirKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirKFC.setDisabledSelectedIcon(null);
         btnDisminuirKFC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirKFCActionPerformed(evt);
@@ -310,7 +305,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirBebida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirBebida.setBorderPainted(false);
         btnDisminuirBebida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirBebida.setDisabledSelectedIcon(null);
         btnDisminuirBebida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirBebidaActionPerformed(evt);
@@ -320,7 +314,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirDulces.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirDulces.setBorderPainted(false);
         btnDisminuirDulces.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirDulces.setDisabledSelectedIcon(null);
         btnDisminuirDulces.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirDulcesActionPerformed(evt);
@@ -330,7 +323,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirBurguer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirBurguer.setBorderPainted(false);
         btnDisminuirBurguer.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirBurguer.setDisabledSelectedIcon(null);
         btnDisminuirBurguer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirBurguerActionPerformed(evt);
@@ -573,10 +565,8 @@ public class GUI_Main extends javax.swing.JFrame {
                                 .addComponent(jLabel7)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel13)
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel12)))
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12)
                             .addComponent(jLabel11)))
                     .addGroup(jblHotDogLayout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -587,16 +577,15 @@ public class GUI_Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jblNachos)
-                        .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jblPapas)
-                            .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jblNachos)
+                    .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jblPapas)
+                        .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jblHotDoh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAumentarHot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1016,6 +1005,9 @@ public class GUI_Main extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GUI_Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

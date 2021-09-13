@@ -16,7 +16,6 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
-        setSize(581,442);
         setLocationRelativeTo(null);
     }
 
@@ -39,27 +38,24 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Principal");
-        getContentPane().setLayout(null);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Elephant", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("PoliCine");
         jLabel2.setVerifyInputWhenFocusTarget(false);
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 20, 290, 80);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 290, 80));
 
         loadingNumber.setBackground(new java.awt.Color(255, 255, 255));
         loadingNumber.setFont(new java.awt.Font("Elephant", 1, 36)); // NOI18N
         loadingNumber.setForeground(new java.awt.Color(255, 255, 255));
         loadingNumber.setText("99");
-        getContentPane().add(loadingNumber);
-        loadingNumber.setBounds(210, 350, 180, 60);
-        getContentPane().add(loadingBar);
-        loadingBar.setBounds(70, 330, 360, 20);
+        getContentPane().add(loadingNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 130, 60));
+        getContentPane().add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 360, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cine.jpg"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 580, 440);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -93,18 +89,17 @@ public class Principal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        new Principal().setVisible(true);
-        Principal numberOne = new Principal();
-        numberOne.setVisible(true);
+        GUI_Main ventana1 = new GUI_Main();
+        Principal mainWindow = new Principal();
+        mainWindow.setVisible(true);
         try {
             for (int i = 0; i <= 100; i++) {
                 Thread.sleep(30);
-                numberOne.loadingNumber.setText(Integer.toString(i) + "%");
-                numberOne.loadingBar.setValue(i);
+                mainWindow.loadingNumber.setText(Integer.toString(i) + "%");
+                mainWindow.loadingBar.setValue(i);
                 if (i == 100) {
-                    GUI_Main ventana1 = new GUI_Main();
                     ventana1.setVisible(true);
-                    numberOne.setVisible(false);
+                    mainWindow.setVisible(false);
                 }
             }
         } catch (Exception e) {
