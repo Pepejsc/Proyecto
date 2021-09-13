@@ -13,9 +13,11 @@ import javax.swing.ImageIcon;
 public class GUI_Main extends javax.swing.JFrame {
 
     int contador=1;
+    
     /**
      * Creates new form GUI_Main
      */
+    
     String accion[] = {"/imagenes/p1.jpg", "/imagenes/p2.jpg", "/imagenes/p3.jpg", "/imagenes/p4.jpg", "/imagenes/p5.jpg", "/imagenes/p6.jpg","/imagenes/p7.jpg","/imagenes/p8.jpg"};
     String drama[] = {"/imagenes/d1.jpg", "/imagenes/d2.jpg", "/imagenes/d3.jpg", "/imagenes/d4.jpg", "/imagenes/d5.jpg", "/imagenes/d6.jpg","/imagenes/d7.jpg","/imagenes/d8.jpg"};
     String terror[] = {"/imagenes/t1.jpg", "/imagenes/t2.jpg", "/imagenes/t3.jpg", "/imagenes/t4.jpg", "/imagenes/t5.jpg", "/imagenes/t6.jpg","/imagenes/t7.jpg","/imagenes/t8.jpg"};
@@ -36,8 +38,10 @@ public class GUI_Main extends javax.swing.JFrame {
     
     public int disminuir(){
         
+        if (contador<=0){
             return contador=0;
-     
+        }
+        return contador--;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -569,9 +573,10 @@ public class GUI_Main extends javax.swing.JFrame {
                                 .addComponent(jLabel7)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel12)
-                                .addComponent(jLabel13))
+                            .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel13)
+                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel12)))
                             .addComponent(jLabel11)))
                     .addGroup(jblHotDogLayout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -582,15 +587,16 @@ public class GUI_Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jblNachos)
-                        .addComponent(jblPapas)
-                        .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jblPapas)
+                            .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jblHotDoh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAumentarHot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -931,10 +937,8 @@ public class GUI_Main extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAumentarBurguerActionPerformed
 
     private void btnAumentarCanguilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarCanguilActionPerformed
-        // TODO add your handling code here:
-        
-        jblCanguil.setText(String.valueOf(aumentar()));
-                
+        // TODO add your handling code here:        
+        jblCanguil.setText(String.valueOf(aumentar()));                
     }//GEN-LAST:event_btnAumentarCanguilActionPerformed
 
     private void btnDisminuirCanguilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirCanguilActionPerformed

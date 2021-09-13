@@ -424,9 +424,11 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -442,15 +444,17 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnDisminuirCanguil" max="32767" attributes="0"/>
-                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                               <Component id="jblNachos" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jblPapas" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jblCanguil" alignment="3" max="32767" attributes="0"/>
                               <Component id="btnDisminuirNachos" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnDisminuirPapas" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnAumentarCanguil" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnAumentarNachos" alignment="0" max="32767" attributes="0"/>
                               <Component id="btnAumentarPapas" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jblPapas" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblCanguil" alignment="3" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <Component id="jblHotDoh" alignment="0" max="32767" attributes="0"/>
                           <Component id="btnDisminuirHotDog" alignment="0" max="32767" attributes="0"/>
