@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package policine;
 
 /**
@@ -16,6 +11,7 @@ public class GUI_Sala extends javax.swing.JFrame {
      */
     public GUI_Sala() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -91,7 +87,7 @@ public class GUI_Sala extends javax.swing.JFrame {
                 btnAñadirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 150, 38));
+        getContentPane().add(btnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 160, 38));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sala.jpg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 440));

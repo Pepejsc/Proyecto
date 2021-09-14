@@ -133,27 +133,67 @@ public class GUI_Main extends javax.swing.JFrame {
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
 
         jblV2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/c1.jpg"))); // NOI18N
+        jblV2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV2MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
 
         jblV3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/d1.jpg"))); // NOI18N
+        jblV3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV3MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
 
         jblV5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/p1.jpg"))); // NOI18N
+        jblV5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV5MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, 150));
 
         jblV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.jpg"))); // NOI18N
+        jblV1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV1MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
 
         jblV6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/s1.jpg"))); // NOI18N
+        jblV6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 150));
 
         jblV7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/t1.jpg"))); // NOI18N
+        jblV7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV7MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 100, 150));
 
         jblV4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/i1.jpg"))); // NOI18N
+        jblV4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV4MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
 
         jblV8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/m2.jpg"))); // NOI18N
+        jblV8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jblV8MouseClicked(evt);
+            }
+        });
         jPanel1.add(jblV8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 100, 150));
 
         jTabbedPane1.addTab("Inicio", jPanel1);
@@ -979,6 +1019,62 @@ public class GUI_Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         jblPoliburguer.setText(String.valueOf(disminuir()));
     }//GEN-LAST:event_btnDisminuirBurguerActionPerformed
+
+    private void jblV1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV1MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV1MouseClicked
+
+    private void jblV2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV2MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV2MouseClicked
+
+    private void jblV3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV3MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV3MouseClicked
+
+    private void jblV4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV4MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV4MouseClicked
+
+    private void jblV5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV5MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV5MouseClicked
+
+    private void jblV6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV6MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV6MouseClicked
+
+    private void jblV7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV7MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV7MouseClicked
+
+    private void jblV8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV8MouseClicked
+        // TODO add your handling code here:
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jblV8MouseClicked
 
     /**
      * @param args the command line arguments

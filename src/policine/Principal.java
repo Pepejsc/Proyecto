@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package policine;
 
 /**
@@ -51,7 +46,7 @@ public class Principal extends javax.swing.JFrame {
         loadingNumber.setFont(new java.awt.Font("Elephant", 1, 36)); // NOI18N
         loadingNumber.setForeground(new java.awt.Color(255, 255, 255));
         loadingNumber.setText("99");
-        getContentPane().add(loadingNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 130, 60));
+        getContentPane().add(loadingNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 130, 60));
         getContentPane().add(loadingBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 360, 20));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cine.jpg"))); // NOI18N
