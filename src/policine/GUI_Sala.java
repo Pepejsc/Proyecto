@@ -1,5 +1,5 @@
 package policine;
-
+import java.util.Random;
 /**
  *
  * @author Usuario
@@ -12,6 +12,7 @@ public class GUI_Sala extends javax.swing.JFrame {
     public GUI_Sala() {
         initComponents();
         setLocationRelativeTo(null);
+        generarHora();
     }
 
     /**
@@ -91,6 +92,11 @@ public class GUI_Sala extends javax.swing.JFrame {
         getContentPane().add(btnAñadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 160, 38));
 
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/back.png"))); // NOI18N
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 50, 40));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sala.jpg"))); // NOI18N
@@ -98,7 +104,24 @@ public class GUI_Sala extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    public void generarHora(){
+        
+        int digito1 = (int)(Math.random()*10);
+        int digito2 = (int)(Math.random()*10);
+        int digito3 = (int)(Math.random()*5);
+        int digito4 = (int)(Math.random()*5);
+        
+        String hora1 = digito1+digito3+":"+digito3+digito4;
+        String hora2 = digito1+digito4+":"+digito4+digito3;
+        String hora3 = digito2+digito3+":"+digito4+digito4;
+        String hora4 = digito2+digito4+":"+digito3+digito3;
+        
+        jButton4.setText(String.valueOf(hora1));
+        jButton5.setText(String.valueOf(hora2));
+        jButton6.setText(String.valueOf(hora3));
+        jButton7.setText(String.valueOf(hora4));
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -107,6 +130,13 @@ public class GUI_Sala extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_btnAñadirActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        GUI_Main v1 = new GUI_Main();
+        v1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
