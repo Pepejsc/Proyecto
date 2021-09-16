@@ -30,6 +30,7 @@ public class GUI_Main extends javax.swing.JFrame {
     public GUI_Main() {
         initComponents();
         setLocationRelativeTo(null);
+        jtbTienda.setEnabledAt(1, false);
     }
     
     public int aumentar(){
@@ -52,8 +53,8 @@ public class GUI_Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        jtbTienda = new javax.swing.JTabbedPane();
+        jblInicio = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jblV2 = new javax.swing.JLabel();
@@ -64,7 +65,7 @@ public class GUI_Main extends javax.swing.JFrame {
         jblV7 = new javax.swing.JLabel();
         jblV4 = new javax.swing.JLabel();
         jblV8 = new javax.swing.JLabel();
-        jblHotDog = new javax.swing.JPanel();
+        jblTienda = new javax.swing.JPanel();
         PoliSnacks = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -114,15 +115,16 @@ public class GUI_Main extends javax.swing.JFrame {
         btnAumentarBebida = new javax.swing.JButton();
         btnAumentarDulce = new javax.swing.JButton();
         btnAumentarBurguer = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jblInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Genero:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 31, 80, 27));
+        jblInicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 31, 80, 27));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija una opción ----------", "Acción", "Drama", "Terror", "Suspenso", "Aventura", "Ciencia Ficción", "Musical", "Infantil" }));
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {
@@ -130,7 +132,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jComboBox1ItemStateChanged(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
+        jblInicio.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
 
         jblV2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/c1.jpg"))); // NOI18N
         jblV2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,7 +140,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV2MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
+        jblInicio.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
 
         jblV3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/d1.jpg"))); // NOI18N
         jblV3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -146,7 +148,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV3MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
+        jblInicio.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
 
         jblV5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/p1.jpg"))); // NOI18N
         jblV5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,7 +156,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV5MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, 150));
+        jblInicio.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, 150));
 
         jblV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.jpg"))); // NOI18N
         jblV1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -162,7 +164,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV1MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
+        jblInicio.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
 
         jblV6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/s1.jpg"))); // NOI18N
         jblV6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -170,7 +172,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV6MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 150));
+        jblInicio.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, 150));
 
         jblV7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/t1.jpg"))); // NOI18N
         jblV7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -178,7 +180,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV7MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 100, 150));
+        jblInicio.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 100, 150));
 
         jblV4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/i1.jpg"))); // NOI18N
         jblV4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -186,7 +188,7 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV4MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
+        jblInicio.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
 
         jblV8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/m2.jpg"))); // NOI18N
         jblV8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -194,9 +196,9 @@ public class GUI_Main extends javax.swing.JFrame {
                 jblV8MouseClicked(evt);
             }
         });
-        jPanel1.add(jblV8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 100, 150));
+        jblInicio.add(jblV8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 100, 150));
 
-        jTabbedPane1.addTab("Inicio", jPanel1);
+        jtbTienda.addTab("Inicio", jblInicio);
 
         PoliSnacks.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PoliSnacks.setText("PoliSnacks");
@@ -441,77 +443,81 @@ public class GUI_Main extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jblHotDogLayout = new javax.swing.GroupLayout(jblHotDog);
-        jblHotDog.setLayout(jblHotDogLayout);
-        jblHotDogLayout.setHorizontalGroup(
-            jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jblHotDogLayout.createSequentialGroup()
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jblTiendaLayout = new javax.swing.GroupLayout(jblTienda);
+        jblTienda.setLayout(jblTiendaLayout);
+        jblTiendaLayout.setHorizontalGroup(
+            jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jblTiendaLayout.createSequentialGroup()
                 .addGap(232, 232, 232)
                 .addComponent(PoliSnacks)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jblHotDogLayout.createSequentialGroup()
+            .addGroup(jblTiendaLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addComponent(jLabel18)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addComponent(jLabel19))
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(btnDisminuirBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jblBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                        .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(118, 118, 118)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(btnDisminuirBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel25)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
                                 .addComponent(btnDisminuirBurguer, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jblPoliburguer, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnAumentarBurguer, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addGap(87, 87, 87)
                         .addComponent(jLabel20)
                         .addGap(78, 78, 78)
                         .addComponent(jLabel21)))
                 .addGap(29, 29, 29))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel22)
-                                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                                        .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jblKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                                        .addGap(31, 31, 31)
+                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel22)
+                                            .addComponent(jblKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAumentarKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addGap(62, 62, 62))
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jblCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
                         .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jblNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -522,164 +528,179 @@ public class GUI_Main extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9)
                         .addGap(44, 44, 44))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel11))
-                                    .addComponent(jLabel7)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnAumentarBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(6, 6, 6))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                                .addComponent(jLabel23)
-                                .addGap(40, 40, 40)))
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(48, 48, 48))
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnAumentarPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jblHotDogLayout.createSequentialGroup()
-                                            .addGap(40, 40, 40)
-                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jblHotDogLayout.createSequentialGroup()
-                                            .addGap(64, 64, 64)
-                                            .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(jblHotDogLayout.createSequentialGroup()
-                                                    .addGap(10, 10, 10)
-                                                    .addComponent(jLabel12))
-                                                .addComponent(jLabel8))))
-                                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jLabel24)
-                                            .addComponent(jblDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnAumentarDulce, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(51, 51, 51)))
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jblHotDogLayout.createSequentialGroup()
-                                    .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jblHotDoh)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btnAumentarHot, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(jLabel13)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(6, 6, 6))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                        .addComponent(jLabel23)
+                                        .addGap(40, 40, 40))
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                                        .addGap(20, 20, 20)
+                                        .addComponent(jLabel7))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                        .addComponent(jLabel11)
+                                        .addGap(34, 34, 34))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                        .addComponent(jblBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnAumentarBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(14, 14, 14)))
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(48, 48, 48))
+                                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(btnAumentarPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                            .addGap(40, 40, 40)
+                                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                            .addGap(64, 64, 64)
+                                                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                                    .addGap(10, 10, 10)
+                                                                    .addComponent(jLabel12))
+                                                                .addComponent(jLabel8))))
+                                                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                        .addComponent(jLabel24)
+                                                        .addGap(35, 35, 35)))
+                                                .addGap(51, 51, 51)))
+                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jblTiendaLayout.createSequentialGroup()
+                                                    .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(jblHotDoh)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(btnAumentarHot, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                                .addGap(35, 35, 35)
+                                                .addComponent(jLabel13))))
+                                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                                        .addGap(43, 43, 43)
+                                        .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jblDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnAumentarDulce, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(203, 203, 203)))
                         .addGap(28, 28, 28))))
         );
-        jblHotDogLayout.setVerticalGroup(
-            jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jblHotDogLayout.createSequentialGroup()
+        jblTiendaLayout.setVerticalGroup(
+            jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jblTiendaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PoliSnacks)
                 .addGap(6, 6, 6)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10))
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jblNachos)
+                            .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jblPapas)
+                                .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jblHotDoh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAumentarHot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel8)))
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
                                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel7)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11)))
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jblNachos)
-                    .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jblPapas)
-                        .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jblHotDoh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAumentarHot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jblTiendaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel12)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(18, 18, 18)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel18)
                     .addComponent(jLabel19)
                     .addComponent(jLabel20)
                     .addComponent(jLabel21))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAumentarBurguer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jblPoliburguer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDisminuirBurguer)))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel22)
                             .addComponent(jLabel23))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jblKFC))
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addComponent(jblBebidas)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAumentarBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnDisminuirBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jblHotDogLayout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAumentarBurguer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jblHotDogLayout.createSequentialGroup()
-                                .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jblPoliburguer)
-                                    .addComponent(btnDisminuirBurguer))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblHotDogLayout.createSequentialGroup()
+                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAumentarKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jblBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jblKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addComponent(jLabel24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jblHotDogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jblDulces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarDulce, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(16, 16, 16))
+                        .addGap(6, 6, 6)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jblDulces)
+                            .addComponent(btnAumentarDulce, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Tienda", jblHotDog);
+        jtbTienda.addTab("Tienda", jblTienda);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -687,15 +708,15 @@ public class GUI_Main extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jtbTienda)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jtbTienda)
+                .addContainerGap())
         );
 
         pack();
@@ -1076,6 +1097,13 @@ public class GUI_Main extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jblV8MouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+           GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1132,6 +1160,7 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JButton btnDisminuirKFC;
     private javax.swing.JButton btnDisminuirNachos;
     private javax.swing.JButton btnDisminuirPapas;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1158,17 +1187,16 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel jblBebidas;
     private javax.swing.JLabel jblCanguil;
     private javax.swing.JLabel jblDulces;
-    private javax.swing.JPanel jblHotDog;
     private javax.swing.JLabel jblHotDoh;
+    private javax.swing.JPanel jblInicio;
     private javax.swing.JLabel jblKFC;
     private javax.swing.JLabel jblNachos;
     private javax.swing.JLabel jblPapas;
     private javax.swing.JLabel jblPoliburguer;
+    private javax.swing.JPanel jblTienda;
     private javax.swing.JLabel jblV1;
     public javax.swing.JLabel jblV2;
     private javax.swing.JLabel jblV3;
@@ -1177,5 +1205,6 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jblV6;
     private javax.swing.JLabel jblV7;
     private javax.swing.JLabel jblV8;
+    public javax.swing.JTabbedPane jtbTienda;
     // End of variables declaration//GEN-END:variables
 }
