@@ -133,7 +133,7 @@ public class GUI_Usuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public void habilitarBotones(){
+    public void habilitarBotones(){//sobanepes steeven
         if(!jTextField1.getText().isEmpty() && !jTextField2.getText().isEmpty() && !jTextField3.getText().isEmpty()){
             jButton1.setEnabled(true);
         }
