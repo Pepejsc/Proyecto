@@ -140,8 +140,8 @@ public class GUI_Usuario extends javax.swing.JFrame {
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
         GUI_Factura f1=new GUI_Factura();
+        JOptionPane.showMessageDialog(null, "Registro Exitoso..!!!");
         f1.setVisible(true);
         this.setVisible(false);        
         
