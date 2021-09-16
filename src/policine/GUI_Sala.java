@@ -163,6 +163,7 @@ public class GUI_Sala extends javax.swing.JFrame {
     
            m1.jtbTienda.setEnabledAt(0, false);
            m1.jtbTienda.setEnabledAt(1, true);
+           this.setVisible(false);
        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
