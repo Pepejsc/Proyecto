@@ -30,5 +30,13 @@ public class Sala {
        int numero2=(int)(Math.random()*10);
        return  numero2;
     }
+    
+    
+    public String toString(){
+        int numeroButaca=asignarButaca();
+        int numeroSala=asignarSala();
+        return "\nTipo Sala: "+tipoSala+"\nNúmero Sala: "+numeroSala+"\nAsiento:"+numeroButaca+"\n"
+                +"Hora función: "+horario;
+    }
 
 }

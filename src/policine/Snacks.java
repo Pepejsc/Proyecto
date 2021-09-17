@@ -11,12 +11,34 @@ package policine;
  */
 public class Snacks {
     
-    String tipoSnacks[];
+    int cantidad;
+    private String nombre;
     double precio;
+    double precioTotal;
 
-    public Snacks(String[] tipoSnacks, double precio) {
-        this.tipoSnacks = tipoSnacks;
+    public Snacks(int cantidad, String nombre, double precio, double precioTotal) {
+        this.cantidad = cantidad;
+        this.nombre = nombre;
         this.precio = precio;
+        this.precioTotal = precioTotal;
     }
+    
+ 
+ 
+//                   String impresion= "\n         Policanguil"
+//                            + "     $3,50" + "    $" + calcularTotal(Integer.parseInt(txtCantidad.getText()), 3.50);
+//                    txaPrecio.append(impresion);
+    
+    @Override
+    public String toString() {
+
+        return  "  ======== 🦉 POLICINE 🦉 ========\n"+
+                "Unidades     Descripcion    PvP    Total"+
+                "\n"+"        "+cantidad+
+                 "\t"+nombre+
+                 "\t$"+precio+
+                 "      $"+precioTotal+"\n";
+    }
+
 
 }

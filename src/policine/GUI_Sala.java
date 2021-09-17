@@ -14,6 +14,7 @@ public class GUI_Sala extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         generarHora();
+        setTitle("Sala");
     }
 
     /**
@@ -180,7 +181,7 @@ public class GUI_Sala extends javax.swing.JFrame {
         
   
         
-       int opcion= JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "", JOptionPane.YES_NO_OPTION);
+       int opcion= JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "Mensaje", JOptionPane.YES_NO_OPTION);
         
        if(opcion==0){
                                

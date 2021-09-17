@@ -15,8 +15,10 @@ public class GUI_Factura extends javax.swing.JFrame {
      * Creates new form GUI_Factura
      */
     public GUI_Factura() {
+        
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Factura");
     }
 
     /**

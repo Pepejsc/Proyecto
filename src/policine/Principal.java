@@ -89,7 +89,7 @@ public class Principal extends javax.swing.JFrame {
         mainWindow.setVisible(true);
         try {
             for (int i = 0; i <= 100; i++) {
-                Thread.sleep(30);
+                Thread.sleep(60);
                 mainWindow.loadingNumber.setText(Integer.toString(i) + "%");
                 mainWindow.loadingBar.setValue(i);
                 if (i == 100) {

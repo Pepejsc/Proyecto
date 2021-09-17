@@ -14,7 +14,7 @@ public class GUI_Usuario extends javax.swing.JFrame {
     public GUI_Usuario() {
         initComponents();
         setLocationRelativeTo(null);
-        
+        setTitle("Usuario");
     }
 
     /**
@@ -43,6 +43,11 @@ public class GUI_Usuario extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre");
 
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
         txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNombreKeyTyped(evt);
@@ -199,8 +204,7 @@ public class GUI_Usuario extends javax.swing.JFrame {
                 evt.consume();
                 getToolkit().beep();
         }
-        
-        
+              
         
         
     }//GEN-LAST:event_txtCedulaKeyTyped
@@ -234,6 +238,10 @@ public class GUI_Usuario extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
 
    
     

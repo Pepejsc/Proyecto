@@ -21,4 +21,7 @@ public class Usuario {
         this.cedula = cedula;
     }
 
+    public String toString(){
+        return "\nNombre Cliente: "+nombre+"Apellido Cliente: "+apellido+"Cedula Cliente: "+cedula;
+    }
 }
