@@ -33,7 +33,7 @@ public class GUI_Sala extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        btnNumeroTickets = new javax.swing.JTextPane();
+        txtNumTickets = new javax.swing.JTextPane();
         btnIngresar = new javax.swing.JButton();
         btnRetroceder = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
@@ -55,21 +55,21 @@ public class GUI_Sala extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ticket.png"))); // NOI18N
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 60, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 60, 30));
 
         jLabel1.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ingrese los números de tickets:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Horarios:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
-        jScrollPane1.setViewportView(btnNumeroTickets);
+        jScrollPane1.setViewportView(txtNumTickets);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 60, 30));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 60, 30));
 
         btnIngresar.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         btnIngresar.setText("Datos Cliente");
@@ -113,33 +113,27 @@ public class GUI_Sala extends javax.swing.JFrame {
         btgHorarios.add(rbtHora1);
         rbtHora1.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         rbtHora1.setForeground(new java.awt.Color(255, 255, 255));
-        rbtHora1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtHora1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rbtHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
+        getContentPane().add(rbtHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
 
         btgHorarios.add(rbtHora2);
         rbtHora2.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         rbtHora2.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(rbtHora2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
+        getContentPane().add(rbtHora2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
 
         btgHorarios.add(rbtHora3);
         rbtHora3.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         rbtHora3.setForeground(new java.awt.Color(255, 255, 255));
-        rbtHora3.setSelected(true);
         rbtHora3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(rbtHora3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
+        getContentPane().add(rbtHora3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, -1));
 
         btgHorarios.add(rbtHora4);
         rbtHora4.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         rbtHora4.setForeground(new java.awt.Color(255, 255, 255));
         rbtHora4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(rbtHora4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
+        getContentPane().add(rbtHora4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sala.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 450));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 440));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,6 +155,13 @@ public class GUI_Sala extends javax.swing.JFrame {
         rbtHora3.setText(String.valueOf(hora3));
         rbtHora4.setText(String.valueOf(hora4));
     }
+    public boolean habilitarBotones(){
+        if(!txtNumTickets.getText().isEmpty()){
+            return true;
+        }else{
+            return false;
+        }
+    }
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
            GUI_Usuario p1 =new GUI_Usuario();
@@ -178,29 +179,22 @@ public class GUI_Sala extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-        
-  
-        
-       int opcion= JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "Mensaje", JOptionPane.YES_NO_OPTION);
-        
-       if(opcion==0){
-                               
-           GUI_Main m1=new GUI_Main();
-           m1.setVisible(true);
-    
-           m1.jtbTienda.setEnabledAt(0, false);
-           m1.jtbTienda.setEnabledAt(1, true);
-           this.setVisible(false);
-       }else{
-           btnIngresar.setEnabled(true);
-       }
-           
-    }//GEN-LAST:event_btnGuardarActionPerformed
+        if(habilitarBotones() == false){
+            JOptionPane.showMessageDialog(null, "Debe inrgesar todos los campos");
+        }else{
+            int opcion = JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "Mensaje", JOptionPane.YES_NO_OPTION);
+            if (opcion == 0) {
 
-    private void rbtHora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtHora1ActionPerformed
-        // TODO add your handling code here:
-                
-    }//GEN-LAST:event_rbtHora1ActionPerformed
+                GUI_Main m1 = new GUI_Main();
+                m1.setVisible(true);
+                m1.jtbTienda.setEnabledAt(0, false);
+                m1.jtbTienda.setEnabledAt(1, true);
+                this.setVisible(false);
+            } else {
+                btnIngresar.setEnabled(true);
+            }
+       }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,7 +236,6 @@ public class GUI_Sala extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btgTipoSala;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIngresar;
-    private javax.swing.JTextPane btnNumeroTickets;
     private javax.swing.JButton btnRetroceder;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -256,5 +249,6 @@ public class GUI_Sala extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbtHora4;
     private javax.swing.JRadioButton rbtSala2D;
     private javax.swing.JRadioButton rbtSala3D;
+    private javax.swing.JTextPane txtNumTickets;
     // End of variables declaration//GEN-END:variables
 }

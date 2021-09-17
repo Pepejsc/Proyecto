@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package policine;
 
 /**
@@ -22,23 +17,12 @@ public class Snacks {
         this.precio = precio;
         this.precioTotal = precioTotal;
     }
-    
- 
- 
-//                   String impresion= "\n         Policanguil"
-//                            + "     $3,50" + "    $" + calcularTotal(Integer.parseInt(txtCantidad.getText()), 3.50);
-//                    txaPrecio.append(impresion);
-    
     @Override
     public String toString() {
 
-        return  "  ======== 🦉 POLICINE 🦉 ========\n"+
-                "Unidades     Descripcion    PvP    Total"+
-                "\n"+"        "+cantidad+
+        return  "\n"+"        "+cantidad+
                  "\t"+nombre+
                  "\t$"+precio+
                  "      $"+precioTotal+"\n";
     }
-
-
 }

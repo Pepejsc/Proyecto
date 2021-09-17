@@ -38,7 +38,6 @@ public class GUI_Main extends javax.swing.JFrame {
     }
     
     public void limpiarGUI(){
-        
         txtCantidad.setText("");
         cmbTienda.setSelectedIndex(0);
     }
@@ -95,15 +94,15 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
 
-        jblV2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/c1.jpg"))); // NOI18N
+        jblV2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV2MouseClicked(evt);
             }
         });
-        jblInicio.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, 143));
+        jblInicio.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 100, 143));
 
-        jblV3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/d1.jpg"))); // NOI18N
+        jblV3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV3MouseClicked(evt);
@@ -111,31 +110,31 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
 
-        jblV5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/p1.jpg"))); // NOI18N
+        jblV5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV5MouseClicked(evt);
             }
         });
-        jblInicio.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, 150));
+        jblInicio.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 100, 150));
 
-        jblV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/a1.jpg"))); // NOI18N
+        jblV1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV1MouseClicked(evt);
             }
         });
-        jblInicio.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 143));
+        jblInicio.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 100, 143));
 
-        jblV6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/s1.jpg"))); // NOI18N
+        jblV6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV6MouseClicked(evt);
             }
         });
-        jblInicio.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, 150));
+        jblInicio.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 100, 150));
 
-        jblV7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/t1.jpg"))); // NOI18N
+        jblV7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV7MouseClicked(evt);
@@ -143,7 +142,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 100, 150));
 
-        jblV4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/i1.jpg"))); // NOI18N
+        jblV4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV4MouseClicked(evt);
@@ -151,7 +150,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
 
-        jblV8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/m2.jpg"))); // NOI18N
+        jblV8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jblV8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV8MouseClicked(evt);
@@ -167,6 +166,7 @@ public class GUI_Main extends javax.swing.JFrame {
         btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnIngresar.setText("Ir Datos Cliente");
         btnIngresar.setActionCommand("");
+        btnIngresar.setEnabled(false);
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
@@ -219,12 +219,10 @@ public class GUI_Main extends javax.swing.JFrame {
                         .addComponent(btnIngresar))
                     .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cmbTienda, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
                         .addComponent(jblCantidad)
@@ -232,7 +230,7 @@ public class GUI_Main extends javax.swing.JFrame {
                         .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(65, 65, 65))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))))
             .addGroup(jblTiendaLayout.createSequentialGroup()
                 .addGap(213, 213, 213)
@@ -575,7 +573,6 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void cmbTiendaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbTiendaItemStateChanged
         // TODO add your handling code here:
-    
         String opcion = (String) cmbTienda.getSelectedItem();
         URL url;
         switch (opcion) {
@@ -584,7 +581,6 @@ public class GUI_Main extends javax.swing.JFrame {
                     url = this.getClass().getResource(productosTienda[0]);
                     Image img1 = ImageIO.read(url);
                     jblProductos.setIcon(new ImageIcon(img1));
-                   
                 } catch (Exception e) {
                 }
                 break;
@@ -593,7 +589,6 @@ public class GUI_Main extends javax.swing.JFrame {
                     url = this.getClass().getResource(productosTienda[1]);
                     Image img2 = ImageIO.read(url);
                     jblProductos.setIcon(new ImageIcon(img2));
-
                 } catch (Exception e) {
                 }
                 break;
@@ -654,59 +649,60 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-        
-        String tipoSnack =(String)cmbTienda.getSelectedItem();
-        
-        double precioSnack;
-        if (tipoSnack.equalsIgnoreCase("Policanguil")){
-            precioSnack=3.50;
-        }else if(tipoSnack.equalsIgnoreCase("Polinachos")){
-            precioSnack=4.00;
-        }else if (tipoSnack.equalsIgnoreCase("Polipapas")){
-            precioSnack=2.50;
-        } else if(tipoSnack.equalsIgnoreCase("Polibebidas")){
-            precioSnack=3.00;
-        }else if (tipoSnack.equalsIgnoreCase("Polipollo")){
-            precioSnack=4.50;
-         }else if(tipoSnack.equalsIgnoreCase("Polihotdog")){
-            precioSnack=1.50;
-        }else if (tipoSnack.equalsIgnoreCase("Polidulces")){
-            precioSnack=2.50;
-        }else{
-            precioSnack=2.00;
+        String inicio = "  ======== 🦉 POLICINE 🦉 ========\n"+
+                "Unidades     Descripcion    PvP    Total";
+        String tipoSnack = (String) cmbTienda.getSelectedItem();
+        double precioSnack =0;
+        switch(tipoSnack){
+            case "Policanguil":
+                precioSnack = 3.50;
+                break;
+            case "Polinachos":
+                precioSnack = 4.00;
+                break;
+            case "Polipapas":
+                precioSnack = 2.50;
+                break;
+            case "Polibebidas":
+                precioSnack = 3.00;
+                break;
+            case "Polipollo":
+                precioSnack = 4.50;
+                break;
+            case "Polihotdog":
+                precioSnack = 1.50;
+                break;
+            case "Polidulces":
+                precioSnack = 2.50;
+                break;
+            case "Poliburguer":
+                precioSnack = 2.00;
+                break;
         }
         
-        int unidades=Integer.parseInt(txtCantidad.getText());
-        double total=calcularTotal(unidades, precioSnack);
-        
-        Snacks s=new Snacks(unidades, tipoSnack, precioSnack,total );
-        
-                
-        txaPrecio.setText(txaPrecio.getText()+s.toString());
-        
+        int unidades = Integer.parseInt(txtCantidad.getText());
+        double total = calcularTotal(unidades, precioSnack);
+        Snacks s = new Snacks(unidades, tipoSnack, precioSnack, total);
+        txaPrecio.setText(txaPrecio.getText()+inicio + s.toString());
         limpiarGUI();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
         // TODO add your handling code here:
-                char validacion1=evt.getKeyChar();
-        if(Character.isLetter(validacion1)){
+        char validacion1 = evt.getKeyChar();
+        if (Character.isLetter(validacion1)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten Numeros");
         }
     }//GEN-LAST:event_txtCantidadKeyTyped
  
-    
-    
     public double calcularTotal(int unidades, double precio) {
 
         double total = unidades * precio;
 
         return total;
     }
-
-     
     /**
      * @param args the command line arguments
      */
