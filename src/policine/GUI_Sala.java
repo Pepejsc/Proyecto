@@ -25,21 +25,23 @@ public class GUI_Sala extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btgTipoSala = new javax.swing.ButtonGroup();
+        btgHorarios = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        btnNumeroTickets = new javax.swing.JTextPane();
         btnIngresar = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        btnRetroceder = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        rbtSala2D = new javax.swing.JRadioButton();
+        rbtSala3D = new javax.swing.JRadioButton();
+        rbtHora1 = new javax.swing.JRadioButton();
+        rbtHora2 = new javax.swing.JRadioButton();
+        rbtHora3 = new javax.swing.JRadioButton();
+        rbtHora4 = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,24 +53,8 @@ public class GUI_Sala extends javax.swing.JFrame {
         jLabel2.setText("Tipo de Sala:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/2d.png"))); // NOI18N
-        jButton1.setToolTipText("");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 50, 50));
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/3d.png"))); // NOI18N
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 50, 50));
-
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ticket.png"))); // NOI18N
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 60, 40));
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 80, 20));
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 80, 20));
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 80, 20));
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 80, 20));
 
         jLabel1.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,38 +66,79 @@ public class GUI_Sala extends javax.swing.JFrame {
         jLabel3.setText("Horarios:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
 
-        jScrollPane1.setViewportView(jTextPane1);
+        jScrollPane1.setViewportView(btnNumeroTickets);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 60, 30));
 
         btnIngresar.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         btnIngresar.setText("Datos Cliente");
+        btnIngresar.setEnabled(false);
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 120, 30));
+        getContentPane().add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 120, 30));
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/back.png"))); // NOI18N
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btnRetroceder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/back.png"))); // NOI18N
+        btnRetroceder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btnRetrocederActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 50, 30));
+        getContentPane().add(btnRetroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 50, 30));
 
-        jButton9.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
-        jButton9.setText("Guardar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 90, 30));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 90, 30));
+
+        btgTipoSala.add(rbtSala2D);
+        rbtSala2D.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        rbtSala2D.setForeground(new java.awt.Color(255, 255, 255));
+        rbtSala2D.setText("Sala 2D");
+        getContentPane().add(rbtSala2D, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, -1, -1));
+
+        btgTipoSala.add(rbtSala3D);
+        rbtSala3D.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtSala3D.setForeground(new java.awt.Color(255, 255, 255));
+        rbtSala3D.setText("Sala 3D");
+        getContentPane().add(rbtSala3D, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, -1, -1));
+
+        btgHorarios.add(rbtHora1);
+        rbtHora1.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        rbtHora1.setForeground(new java.awt.Color(255, 255, 255));
+        rbtHora1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtHora1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rbtHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, -1, -1));
+
+        btgHorarios.add(rbtHora2);
+        rbtHora2.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        rbtHora2.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(rbtHora2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
+
+        btgHorarios.add(rbtHora3);
+        rbtHora3.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        rbtHora3.setForeground(new java.awt.Color(255, 255, 255));
+        rbtHora3.setSelected(true);
+        rbtHora3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(rbtHora3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, -1, -1));
+
+        btgHorarios.add(rbtHora4);
+        rbtHora4.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
+        rbtHora4.setForeground(new java.awt.Color(255, 255, 255));
+        rbtHora4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(rbtHora4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sala.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 440));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 450));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,20 +150,16 @@ public class GUI_Sala extends javax.swing.JFrame {
         int digito3 = (int)(Math.random()*5);
         int digito4 = (int)(Math.random()*5);
         
-        String hora1 = digito1+digito3+":"+digito3+digito4;
-        String hora2 = digito1+digito4+":"+digito4+digito3;
-        String hora3 = digito2+digito3+":"+digito4+digito4;
-        String hora4 = digito2+digito4+":"+digito3+digito3;
+        String hora1 = digito1+digito3+":"+digito3+digito4+" pm";
+        String hora2 = digito1+digito4+":"+digito4+digito3+" pm";
+        String hora3 = digito2+digito3+":"+digito4+digito4+" pm";
+        String hora4 = digito2+digito4+":"+digito3+digito3+" pm";
         
-        jButton4.setText(String.valueOf(hora1));
-        jButton5.setText(String.valueOf(hora2));
-        jButton6.setText(String.valueOf(hora3));
-        jButton7.setText(String.valueOf(hora4));
+        rbtHora1.setText(String.valueOf(hora1));
+        rbtHora2.setText(String.valueOf(hora2));
+        rbtHora3.setText(String.valueOf(hora3));
+        rbtHora4.setText(String.valueOf(hora4));
     }
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
            GUI_Usuario p1 =new GUI_Usuario();
@@ -145,15 +168,18 @@ public class GUI_Sala extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void btnRetrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederActionPerformed
         // TODO add your handling code here:
         GUI_Main v1 = new GUI_Main();
         v1.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_btnRetrocederActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
+        
+  
+        
        int opcion= JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "", JOptionPane.YES_NO_OPTION);
         
        if(opcion==0){
@@ -164,8 +190,16 @@ public class GUI_Sala extends javax.swing.JFrame {
            m1.jtbTienda.setEnabledAt(0, false);
            m1.jtbTienda.setEnabledAt(1, true);
            this.setVisible(false);
+       }else{
+           btnIngresar.setEnabled(true);
        }
-    }//GEN-LAST:event_jButton9ActionPerformed
+           
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+    private void rbtHora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtHora1ActionPerformed
+        // TODO add your handling code here:
+                
+    }//GEN-LAST:event_rbtHora1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,21 +237,23 @@ public class GUI_Sala extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgHorarios;
+    private javax.swing.ButtonGroup btgTipoSala;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextPane btnNumeroTickets;
+    private javax.swing.JButton btnRetroceder;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JRadioButton rbtHora1;
+    private javax.swing.JRadioButton rbtHora2;
+    private javax.swing.JRadioButton rbtHora3;
+    private javax.swing.JRadioButton rbtHora4;
+    private javax.swing.JRadioButton rbtSala2D;
+    private javax.swing.JRadioButton rbtSala3D;
     // End of variables declaration//GEN-END:variables
 }
