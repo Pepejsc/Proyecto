@@ -26,7 +26,8 @@ public class GUI_Main extends javax.swing.JFrame {
     String ciencia[] = {"/imagenes/c1.jpg", "/imagenes/c2.jpg", "/imagenes/c3.jpg", "/imagenes/c4.jpg", "/imagenes/c5.jpg", "/imagenes/c6.jpg","/imagenes/c7.jpg","/imagenes/c8.jpg"};
     String musical[] = {"/imagenes/m1.jpeg", "/imagenes/m2.jpg", "/imagenes/m3.jpg", "/imagenes/m4.jpg", "/imagenes/m5.jpg", "/imagenes/m6.jpg","/imagenes/m7.jpg","/imagenes/m8.jpg"};
     String infantil[] = {"/imagenes/i1.jpg", "/imagenes/i2.png", "/imagenes/i3.jpg", "/imagenes/i4.jpg", "/imagenes/i5.jpg", "/imagenes/i6.jpg","/imagenes/i7.jpg","/imagenes/i8.jpg"};
-
+    String tienda [] = {};
+    
     public GUI_Main() {
         initComponents();
         setLocationRelativeTo(null);
@@ -67,55 +68,12 @@ public class GUI_Main extends javax.swing.JFrame {
         jblV8 = new javax.swing.JLabel();
         jblTienda = new javax.swing.JPanel();
         PoliSnacks = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jblPapas = new javax.swing.JLabel();
         jblCanguil = new javax.swing.JLabel();
-        jblNachos = new javax.swing.JLabel();
-        jblHotDoh = new javax.swing.JLabel();
-        jblKFC = new javax.swing.JLabel();
-        jblBebidas = new javax.swing.JLabel();
-        jblDulces = new javax.swing.JLabel();
-        jblPoliburguer = new javax.swing.JLabel();
         btnDisminuirCanguil = new javax.swing.JButton();
-        btnDisminuirNachos = new javax.swing.JButton();
-        btnDisminuirPapas = new javax.swing.JButton();
-        btnDisminuirHotDog = new javax.swing.JButton();
-        btnDisminuirKFC = new javax.swing.JButton();
-        btnDisminuirBebida = new javax.swing.JButton();
-        btnDisminuirDulces = new javax.swing.JButton();
-        btnDisminuirBurguer = new javax.swing.JButton();
         btnAumentarCanguil = new javax.swing.JButton();
-        btnAumentarNachos = new javax.swing.JButton();
-        btnAumentarPapas = new javax.swing.JButton();
-        btnAumentarHot = new javax.swing.JButton();
-        btnAumentarKFC = new javax.swing.JButton();
-        btnAumentarBebida = new javax.swing.JButton();
-        btnAumentarDulce = new javax.swing.JButton();
-        btnAumentarBurguer = new javax.swing.JButton();
         btnIngresar = new javax.swing.JButton();
+        jblProductos = new javax.swing.JLabel();
+        cmbTienda = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -203,101 +161,10 @@ public class GUI_Main extends javax.swing.JFrame {
         PoliSnacks.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PoliSnacks.setText("PoliSnacks");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/poliburguer.jpg"))); // NOI18N
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/polihotdog.jpg"))); // NOI18N
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/polinachos.jpg"))); // NOI18N
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/polipapas.jpg"))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel6.setText("PoliCanguil");
-
-        jLabel7.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel7.setText("PoliNachos");
-
-        jLabel8.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel8.setText("PoliPapas");
-
-        jLabel9.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel9.setText("PoliHotdog");
-
-        jLabel10.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel10.setText("$3.35");
-
-        jLabel11.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel11.setText("$4.00");
-
-        jLabel12.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel12.setText("$2.50");
-
-        jLabel13.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel13.setText("$4.00");
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/policanguil.jpg"))); // NOI18N
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/policola.jpg"))); // NOI18N
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/polichocolate.jpg"))); // NOI18N
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/polikfc.jpg"))); // NOI18N
-
-        jLabel18.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel18.setText("PoliKFC");
-
-        jLabel19.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel19.setText("PoliBebidas");
-
-        jLabel20.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel20.setText("PoliDulces");
-
-        jLabel21.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel21.setText("Poliburguer");
-
-        jLabel22.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel22.setText("$5.00");
-
-        jLabel23.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel23.setText("$3.00");
-
-        jLabel24.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel24.setText("$2.00");
-
-        jLabel25.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 11)); // NOI18N
-        jLabel25.setText("$4.50");
-
-        jblPapas.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblPapas.setForeground(new java.awt.Color(0, 153, 255));
-        jblPapas.setText("0");
-
         jblCanguil.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
         jblCanguil.setForeground(new java.awt.Color(0, 153, 255));
+        jblCanguil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jblCanguil.setText("0");
-
-        jblNachos.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblNachos.setForeground(new java.awt.Color(0, 153, 255));
-        jblNachos.setText("0");
-
-        jblHotDoh.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblHotDoh.setForeground(new java.awt.Color(0, 153, 255));
-        jblHotDoh.setText("0");
-
-        jblKFC.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblKFC.setForeground(new java.awt.Color(0, 153, 255));
-        jblKFC.setText("0");
-
-        jblBebidas.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblBebidas.setForeground(new java.awt.Color(0, 153, 255));
-        jblBebidas.setText("0");
-
-        jblDulces.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblDulces.setForeground(new java.awt.Color(0, 153, 255));
-        jblDulces.setText("0");
-
-        jblPoliburguer.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 14)); // NOI18N
-        jblPoliburguer.setForeground(new java.awt.Color(0, 153, 255));
-        jblPoliburguer.setText("0");
 
         btnDisminuirCanguil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
         btnDisminuirCanguil.setBorderPainted(false);
@@ -305,69 +172,6 @@ public class GUI_Main extends javax.swing.JFrame {
         btnDisminuirCanguil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDisminuirCanguilActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirNachos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirNachos.setBorderPainted(false);
-        btnDisminuirNachos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirNachos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirNachosActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirPapas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirPapas.setBorderPainted(false);
-        btnDisminuirPapas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirPapas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirPapasActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirHotDog.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirHotDog.setBorderPainted(false);
-        btnDisminuirHotDog.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirHotDog.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirHotDogActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirKFC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirKFC.setBorderPainted(false);
-        btnDisminuirKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirKFC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirKFCActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirBebida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirBebida.setBorderPainted(false);
-        btnDisminuirBebida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirBebida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirBebidaActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirDulces.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirDulces.setBorderPainted(false);
-        btnDisminuirDulces.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirDulces.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirDulcesActionPerformed(evt);
-            }
-        });
-
-        btnDisminuirBurguer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/disminuir.png"))); // NOI18N
-        btnDisminuirBurguer.setBorderPainted(false);
-        btnDisminuirBurguer.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnDisminuirBurguer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisminuirBurguerActionPerformed(evt);
             }
         });
 
@@ -380,74 +184,18 @@ public class GUI_Main extends javax.swing.JFrame {
             }
         });
 
-        btnAumentarNachos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarNachos.setBorderPainted(false);
-        btnAumentarNachos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarNachos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarNachosActionPerformed(evt);
-            }
-        });
-
-        btnAumentarPapas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarPapas.setBorderPainted(false);
-        btnAumentarPapas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarPapas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarPapasActionPerformed(evt);
-            }
-        });
-
-        btnAumentarHot.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarHot.setBorderPainted(false);
-        btnAumentarHot.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarHot.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarHotActionPerformed(evt);
-            }
-        });
-
-        btnAumentarKFC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarKFC.setBorderPainted(false);
-        btnAumentarKFC.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarKFC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarKFCActionPerformed(evt);
-            }
-        });
-
-        btnAumentarBebida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarBebida.setBorderPainted(false);
-        btnAumentarBebida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarBebida.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarBebidaActionPerformed(evt);
-            }
-        });
-
-        btnAumentarDulce.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarDulce.setBorderPainted(false);
-        btnAumentarDulce.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarDulce.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarDulceActionPerformed(evt);
-            }
-        });
-
-        btnAumentarBurguer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/anadir.png"))); // NOI18N
-        btnAumentarBurguer.setBorderPainted(false);
-        btnAumentarBurguer.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnAumentarBurguer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAumentarBurguerActionPerformed(evt);
-            }
-        });
-
         btnIngresar.setText("Ingresar Datos Cliente");
         btnIngresar.setActionCommand("");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
+            }
+        });
+
+        cmbTienda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija un producto ----------", "Policanguil", "Polinachos", "Polipapas", "Polibebidas", "Polipollo", "Polihotdog", "Polidulces", "Poliburguer" }));
+        cmbTienda.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbTiendaItemStateChanged(evt);
             }
         });
 
@@ -459,245 +207,46 @@ public class GUI_Main extends javax.swing.JFrame {
                 .addGap(232, 232, 232)
                 .addComponent(PoliSnacks)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jblTiendaLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel18)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel19))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(btnDisminuirBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel25)
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addComponent(btnDisminuirBurguer, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jblPoliburguer, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnAumentarBurguer, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel20)
-                        .addGap(78, 78, 78)
-                        .addComponent(jLabel21)))
-                .addGap(29, 29, 29))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
                 .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                .addGap(31, 31, 31)
-                                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jLabel22)
-                                                    .addComponent(jblKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnAumentarKFC, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(46, 46, 46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(45, 45, 45))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(62, 62, 62))
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jblCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jblNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAumentarNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jblPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel9)
-                                .addGap(44, 44, 44))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(6, 6, 6))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                        .addComponent(jLabel23)
-                                        .addGap(40, 40, 40))
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(jLabel7))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                        .addComponent(jLabel11)
-                                        .addGap(34, 34, 34))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                        .addComponent(jblBebidas, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnAumentarBebida, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(14, 14, 14)))
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(48, 48, 48))
-                                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(btnAumentarPapas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                            .addGap(40, 40, 40)
-                                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                            .addGap(64, 64, 64)
-                                                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                                    .addGap(10, 10, 10)
-                                                                    .addComponent(jLabel12))
-                                                                .addComponent(jLabel8))))
-                                                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                        .addComponent(jLabel24)
-                                                        .addGap(35, 35, 35)))
-                                                .addGap(51, 51, 51)))
-                                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jblTiendaLayout.createSequentialGroup()
-                                                    .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(jblHotDoh)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(btnAumentarHot, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                                .addGap(35, 35, 35)
-                                                .addComponent(jLabel13))))
-                                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                                        .addGap(43, 43, 43)
-                                        .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jblDulces, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btnAumentarDulce, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(28, 28, 28))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addComponent(btnIngresar)
-                        .addGap(208, 208, 208))))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(btnIngresar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addComponent(btnDisminuirCanguil)
+                        .addGap(26, 26, 26)
+                        .addComponent(jblCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnAumentarCanguil))
+                    .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(68, 68, 68))
         );
         jblTiendaLayout.setVerticalGroup(
             jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jblTiendaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PoliSnacks)
-                .addGap(6, 6, 6)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10))
-                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addContainerGap()
+                        .addComponent(PoliSnacks)
+                        .addGap(46, 46, 46)
+                        .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
+                        .addComponent(btnIngresar))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jblProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblNachos)
-                            .addComponent(btnDisminuirPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarNachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarPapas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jblPapas)
-                                .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jblHotDoh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirHotDog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarHot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel8)))
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)))
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jblTiendaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel12)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnDisminuirNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(18, 18, 18)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel20)
-                    .addComponent(jLabel21))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAumentarBurguer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblPoliburguer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirBurguer)))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel22)
-                            .addComponent(jLabel23))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAumentarBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirBebida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAumentarKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblBebidas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jblKFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDisminuirDulces, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addGap(6, 6, 6)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblDulces)
-                            .addComponent(btnAumentarDulce, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(btnIngresar)
-                .addContainerGap())
+                            .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jblCanguil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAumentarCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnDisminuirCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(48, 48, 48))
         );
 
         jtbTienda.addTab("Tienda", jblTienda);
@@ -961,31 +510,6 @@ public class GUI_Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
-    private void btnAumentarHotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarHotActionPerformed
-        // TODO add your handling code here:
-        jblHotDoh.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarHotActionPerformed
-
-    private void btnAumentarKFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarKFCActionPerformed
-        // TODO add your handling code here:
-        jblKFC.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarKFCActionPerformed
-
-    private void btnAumentarBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarBebidaActionPerformed
-        // TODO add your handling code here:
-        jblBebidas.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarBebidaActionPerformed
-
-    private void btnAumentarDulceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarDulceActionPerformed
-        // TODO add your handling code here:
-        jblDulces.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarDulceActionPerformed
-
-    private void btnAumentarBurguerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarBurguerActionPerformed
-        // TODO add your handling code here:
-        jblPoliburguer.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarBurguerActionPerformed
-
     private void btnAumentarCanguilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarCanguilActionPerformed
         // TODO add your handling code here:        
         jblCanguil.setText(String.valueOf(aumentar()));                
@@ -995,51 +519,6 @@ public class GUI_Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         jblCanguil.setText(String.valueOf(disminuir()));
     }//GEN-LAST:event_btnDisminuirCanguilActionPerformed
-
-    private void btnAumentarNachosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarNachosActionPerformed
-        // TODO add your handling code here:
-        jblNachos.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarNachosActionPerformed
-
-    private void btnDisminuirNachosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirNachosActionPerformed
-        // TODO add your handling code here:
-        jblNachos.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirNachosActionPerformed
-
-    private void btnAumentarPapasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAumentarPapasActionPerformed
-        // TODO add your handling code here:
-        jblPapas.setText(String.valueOf(aumentar()));
-    }//GEN-LAST:event_btnAumentarPapasActionPerformed
-
-    private void btnDisminuirPapasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirPapasActionPerformed
-        // TODO add your handling code here:
-        jblPapas.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirPapasActionPerformed
-
-    private void btnDisminuirHotDogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirHotDogActionPerformed
-        // TODO add your handling code here:
-        jblHotDoh.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirHotDogActionPerformed
-
-    private void btnDisminuirKFCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirKFCActionPerformed
-        // TODO add your handling code here:
-        jblKFC.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirKFCActionPerformed
-
-    private void btnDisminuirBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirBebidaActionPerformed
-        // TODO add your handling code here:
-        jblBebidas.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirBebidaActionPerformed
-
-    private void btnDisminuirDulcesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirDulcesActionPerformed
-        // TODO add your handling code here:
-        jblDulces.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirDulcesActionPerformed
-
-    private void btnDisminuirBurguerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisminuirBurguerActionPerformed
-        // TODO add your handling code here:
-        jblPoliburguer.setText(String.valueOf(disminuir()));
-    }//GEN-LAST:event_btnDisminuirBurguerActionPerformed
 
     private void jblV1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV1MouseClicked
         // TODO add your handling code here:
@@ -1104,6 +583,77 @@ public class GUI_Main extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnIngresarActionPerformed
 
+    private void cmbTiendaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbTiendaItemStateChanged
+        // TODO add your handling code here:
+        String opcion = (String) cmbTienda.getSelectedItem();
+        switch(opcion){
+            case "Policanguil":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polinachos":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polipapas":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polibebidas":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polipollo":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polihotdog":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Polidulces":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+            case "Poliburguer":
+                try {
+                        URL url = this.getClass().getResource(accion[0]);
+                        Image img1 = ImageIO.read(url);
+                        jblV1.setIcon(new ImageIcon(img1));
+                    } catch (Exception e) {
+                    }
+                break;
+        }
+    }//GEN-LAST:event_cmbTiendaItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -1144,58 +694,15 @@ public class GUI_Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel PoliSnacks;
-    private javax.swing.JButton btnAumentarBebida;
-    private javax.swing.JButton btnAumentarBurguer;
     private javax.swing.JButton btnAumentarCanguil;
-    private javax.swing.JButton btnAumentarDulce;
-    private javax.swing.JButton btnAumentarHot;
-    private javax.swing.JButton btnAumentarKFC;
-    private javax.swing.JButton btnAumentarNachos;
-    private javax.swing.JButton btnAumentarPapas;
-    private javax.swing.JButton btnDisminuirBebida;
-    private javax.swing.JButton btnDisminuirBurguer;
     private javax.swing.JButton btnDisminuirCanguil;
-    private javax.swing.JButton btnDisminuirDulces;
-    private javax.swing.JButton btnDisminuirHotDog;
-    private javax.swing.JButton btnDisminuirKFC;
-    private javax.swing.JButton btnDisminuirNachos;
-    private javax.swing.JButton btnDisminuirPapas;
     private javax.swing.JButton btnIngresar;
+    private javax.swing.JComboBox<String> cmbTienda;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jblBebidas;
     private javax.swing.JLabel jblCanguil;
-    private javax.swing.JLabel jblDulces;
-    private javax.swing.JLabel jblHotDoh;
     private javax.swing.JPanel jblInicio;
-    private javax.swing.JLabel jblKFC;
-    private javax.swing.JLabel jblNachos;
-    private javax.swing.JLabel jblPapas;
-    private javax.swing.JLabel jblPoliburguer;
+    private javax.swing.JLabel jblProductos;
     private javax.swing.JPanel jblTienda;
     private javax.swing.JLabel jblV1;
     public javax.swing.JLabel jblV2;
