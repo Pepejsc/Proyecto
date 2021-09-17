@@ -5,11 +5,13 @@
  */
 package policine;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
-public class GUI_Factura extends javax.swing.JFrame {
+public class GUI_Factura extends javax.swing.JFrame{
 
     /**
      * Creates new form GUI_Factura
@@ -19,8 +21,24 @@ public class GUI_Factura extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Factura");
+        Factura f1 = new Factura();
+
+        String infoUsuario = "\nCliente: " + GUI_Usuario.nombre + " " + GUI_Usuario.apellido
+                + "\tCedula: " + GUI_Usuario.cedula;
+
+        String infoSnacks = "\n\nUNIDADES                DETALLE           PvP         TOTAL"
+                + "\n ========================================================="
+                + "\n         " + GUI_Main.unidadesProducto
+                + "                   " + GUI_Main.tipoSnack
+                + "           $" + GUI_Main.precioSnack + "          $" + GUI_Main.totalAPagar;
+
+        txaDatosFactura.setText(txaDatosFactura.getText()+"======================== POLICINE ========================\n"
+                + f1.mostrarFecha() + infoUsuario + infoSnacks);
+
+
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,41 +48,28 @@ public class GUI_Factura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jblFactura = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtDatosFac = new javax.swing.JTextArea();
+        txaDatosFactura = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("SimSun-ExtB", 1, 48)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("FACTURA");
+        jblFactura.setFont(new java.awt.Font("Elephant", 1, 24)); // NOI18N
+        jblFactura.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jblFactura.setText("FACTURA");
+        getContentPane().add(jblFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 474, 65));
 
-        txtDatosFac.setEditable(false);
-        txtDatosFac.setColumns(20);
-        txtDatosFac.setRows(5);
-        jScrollPane1.setViewportView(txtDatosFac);
+        txaDatosFactura.setEditable(false);
+        txaDatosFactura.setColumns(20);
+        txaDatosFactura.setRows(5);
+        jScrollPane1.setViewportView(txaDatosFactura);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 420, 430));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/factura.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -105,8 +110,9 @@ public class GUI_Factura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea txtDatosFac;
+    private javax.swing.JLabel jblFactura;
+    private javax.swing.JTextArea txaDatosFactura;
     // End of variables declaration//GEN-END:variables
 }

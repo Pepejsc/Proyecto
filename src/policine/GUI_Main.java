@@ -13,7 +13,12 @@ import javax.swing.JOptionPane;
  */
 public class GUI_Main extends javax.swing.JFrame {
 
-    int contador = 1;
+    
+    public static int unidadesProducto=0;
+    public static String tipoSnack="";
+    public static double precioSnack=0.0;
+    public static double totalAPagar=0.0;
+    
     
     /**
      * Creates new form GUI_Main
@@ -35,6 +40,14 @@ public class GUI_Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         jtbTienda.setEnabledAt(1, false);
         setTitle("Cartelera");
+        jblV1.setVisible(false);
+        jblV2.setVisible(false);
+        jblV3.setVisible(false);
+        jblV4.setVisible(false);
+        jblV5.setVisible(false);
+        jblV6.setVisible(false);
+        jblV7.setVisible(false);
+        jblV8.setVisible(false);
     }
     
     public void limpiarGUI(){
@@ -42,6 +55,16 @@ public class GUI_Main extends javax.swing.JFrame {
         cmbTienda.setSelectedIndex(0);
     }
  
+    public void habilitarImagenes(){
+        jblV1.setVisible(true);
+        jblV2.setVisible(true);
+        jblV3.setVisible(true);
+        jblV4.setVisible(true);
+        jblV5.setVisible(true);
+        jblV6.setVisible(true);
+        jblV7.setVisible(true);
+        jblV8.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,8 +77,8 @@ public class GUI_Main extends javax.swing.JFrame {
 
         jtbTienda = new javax.swing.JTabbedPane();
         jblInicio = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jblGenero = new javax.swing.JLabel();
+        cmbGenero = new javax.swing.JComboBox<>();
         jblV2 = new javax.swing.JLabel();
         jblV3 = new javax.swing.JLabel();
         jblV5 = new javax.swing.JLabel();
@@ -64,8 +87,9 @@ public class GUI_Main extends javax.swing.JFrame {
         jblV7 = new javax.swing.JLabel();
         jblV4 = new javax.swing.JLabel();
         jblV8 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jblTienda = new javax.swing.JPanel();
-        PoliSnacks = new javax.swing.JLabel();
+        jblPoliSnacks = new javax.swing.JLabel();
         btnIngresar = new javax.swing.JButton();
         jblProductos = new javax.swing.JLabel();
         cmbTienda = new javax.swing.JComboBox<>();
@@ -74,27 +98,31 @@ public class GUI_Main extends javax.swing.JFrame {
         jblCantidad = new javax.swing.JLabel();
         txtCantidad = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jtbTienda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jblInicio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Genero:");
-        jblInicio.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 31, 80, 27));
+        jblGenero.setFont(new java.awt.Font("Elephant", 0, 18)); // NOI18N
+        jblGenero.setText("Género:");
+        jblInicio.add(jblGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 31, 80, 27));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija una opción ----------", "Acción", "Drama", "Terror", "Suspenso", "Aventura", "Ciencia Ficción", "Musical", "Infantil" }));
-        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+        cmbGenero.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija una opción ----------", "Acción", "Drama", "Terror", "Suspenso", "Aventura", "Ciencia Ficción", "Musical", "Infantil" }));
+        cmbGenero.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBox1ItemStateChanged(evt);
+                cmbGeneroItemStateChanged(evt);
             }
         });
-        jblInicio.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 37, 229, -1));
+        jblInicio.add(cmbGenero, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 229, -1));
 
-        jblV2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV2MouseClicked(evt);
@@ -102,7 +130,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 100, 143));
 
-        jblV3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV3MouseClicked(evt);
@@ -110,7 +138,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 105, 143));
 
-        jblV5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV5MouseClicked(evt);
@@ -118,7 +146,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 100, 150));
 
-        jblV1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV1MouseClicked(evt);
@@ -126,7 +154,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 100, 143));
 
-        jblV6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV6MouseClicked(evt);
@@ -134,7 +162,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 100, 150));
 
-        jblV7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV7MouseClicked(evt);
@@ -142,7 +170,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 100, 150));
 
-        jblV4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV4MouseClicked(evt);
@@ -150,7 +178,7 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 100, 140));
 
-        jblV8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jblV8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jblV8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jblV8MouseClicked(evt);
@@ -158,10 +186,16 @@ public class GUI_Main extends javax.swing.JFrame {
         });
         jblInicio.add(jblV8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 100, 150));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/peliculas.jpg"))); // NOI18N
+        jblInicio.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 440));
+
         jtbTienda.addTab("Inicio", jblInicio);
 
-        PoliSnacks.setFont(new java.awt.Font("Elephant", 0, 24)); // NOI18N
-        PoliSnacks.setText("PoliSnacks");
+        jblTienda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jblPoliSnacks.setFont(new java.awt.Font("Elephant", 0, 24)); // NOI18N
+        jblPoliSnacks.setText("PoliSnacks");
+        jblTienda.add(jblPoliSnacks, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
 
         btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnIngresar.setText("Ir Datos Cliente");
@@ -172,8 +206,10 @@ public class GUI_Main extends javax.swing.JFrame {
                 btnIngresarActionPerformed(evt);
             }
         });
+        jblTienda.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 361, -1, -1));
 
         jblProductos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jblTienda.add(jblProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 180, 191));
 
         cmbTienda.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         cmbTienda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---------- Elija un producto ----------", "Policanguil", "Polinachos", "Polipapas", "Polibebidas", "Polipollo", "Polihotdog", "Polidulces", "Poliburguer" }));
@@ -183,20 +219,25 @@ public class GUI_Main extends javax.swing.JFrame {
                 cmbTiendaItemStateChanged(evt);
             }
         });
+        jblTienda.add(cmbTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 73, 243, -1));
 
         txaPrecio.setEditable(false);
         txaPrecio.setColumns(20);
         txaPrecio.setRows(5);
         jScrollPane1.setViewportView(txaPrecio);
 
+        jblTienda.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 114, 243, 232));
+
         jblCantidad.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jblCantidad.setText("Cantidad :");
+        jblTienda.add(jblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 365, -1, -1));
 
         txtCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCantidadKeyTyped(evt);
             }
         });
+        jblTienda.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 359, 38, 28));
 
         btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnGuardar.setText("Guardar");
@@ -205,308 +246,269 @@ public class GUI_Main extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
+        jblTienda.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 361, -1, -1));
 
-        javax.swing.GroupLayout jblTiendaLayout = new javax.swing.GroupLayout(jblTienda);
-        jblTienda.setLayout(jblTiendaLayout);
-        jblTiendaLayout.setHorizontalGroup(
-            jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(btnGuardar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnIngresar))
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmbTienda, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addComponent(jblCantidad)
-                        .addGap(29, 29, 29)
-                        .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))))
-            .addGroup(jblTiendaLayout.createSequentialGroup()
-                .addGap(213, 213, 213)
-                .addComponent(PoliSnacks)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jblTiendaLayout.setVerticalGroup(
-            jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(PoliSnacks)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jblTiendaLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                        .addGap(13, 13, 13)
-                        .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnIngresar)
-                            .addComponent(btnGuardar)
-                            .addComponent(jblCantidad)
-                            .addComponent(txtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))))
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/peliculas.jpg"))); // NOI18N
+        jblTienda.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 440));
 
         jtbTienda.addTab("Tienda", jblTienda);
 
-        getContentPane().add(jtbTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 480));
+        getContentPane().add(jtbTienda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 570, 460));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cartelera.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+    
+    
+    private void cmbGeneroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbGeneroItemStateChanged
         // TODO add your handling code here:
-        String genero = (String) jComboBox1.getSelectedItem();
+        String genero = (String) cmbGenero.getSelectedItem();
         switch (genero) {
             case "Acción":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(accion[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(accion[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(accion[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(accion[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(accion[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(accion[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(accion[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(accion[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(accion[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(accion[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(accion[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(accion[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(accion[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(accion[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(accion[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
-            case "Drama": 
+            case "Drama":
                 try {
-                        URL url = this.getClass().getResource(drama[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(drama[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(drama[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(drama[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(drama[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(drama[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(drama[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(drama[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(drama[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(drama[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(drama[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(drama[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(drama[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(drama[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(drama[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(drama[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Terror":
                 try {
-                        URL url = this.getClass().getResource(terror[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(terror[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(terror[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(terror[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(terror[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(terror[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(terror[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(terror[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(terror[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(terror[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(terror[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(terror[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(terror[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(terror[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(terror[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(terror[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Suspenso":
                 try {
-                        URL url = this.getClass().getResource(suspenso[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(suspenso[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(suspenso[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(suspenso[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(suspenso[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(suspenso[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(suspenso[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(suspenso[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(suspenso[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(suspenso[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(suspenso[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(suspenso[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(suspenso[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(suspenso[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(suspenso[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(suspenso[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Aventura":
                 try {
-                        URL url = this.getClass().getResource(aventura[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(aventura[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(aventura[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(aventura[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(aventura[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(aventura[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(aventura[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(aventura[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(aventura[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(aventura[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(aventura[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(aventura[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(aventura[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(aventura[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(aventura[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(aventura[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Ciencia Ficción":
                 try {
-                        URL url = this.getClass().getResource(ciencia[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(ciencia[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(ciencia[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(ciencia[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(ciencia[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(ciencia[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(ciencia[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(ciencia[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(ciencia[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(ciencia[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(ciencia[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(ciencia[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(ciencia[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(ciencia[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(ciencia[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(ciencia[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Musical":
                 try {
-                        URL url = this.getClass().getResource(musical[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(musical[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(musical[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(musical[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(musical[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(musical[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(musical[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(musical[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(musical[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(musical[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(musical[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(musical[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(musical[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(musical[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(musical[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(musical[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
             case "Infantil":
                 try {
-                        URL url = this.getClass().getResource(infantil[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
-                        url = this.getClass().getResource(infantil[1]);
-                        Image img2 = ImageIO.read(url);
-                        jblV2.setIcon(new ImageIcon(img2));
-                        url = this.getClass().getResource(infantil[2]);
-                        Image img3 = ImageIO.read(url);
-                        jblV3.setIcon(new ImageIcon(img3));
-                        url = this.getClass().getResource(infantil[3]);
-                        Image img4 = ImageIO.read(url);
-                        jblV4.setIcon(new ImageIcon(img4));
-                        url = this.getClass().getResource(infantil[4]);
-                        Image img5 = ImageIO.read(url);
-                        jblV5.setIcon(new ImageIcon(img5));
-                        url = this.getClass().getResource(infantil[5]);
-                        Image img6 = ImageIO.read(url);                                
-                        jblV6.setIcon(new ImageIcon(img6));
-                        url = this.getClass().getResource(infantil[6]);
-                        Image img7 = ImageIO.read(url);                                
-                        jblV7.setIcon(new ImageIcon(img7));
-                        url = this.getClass().getResource(infantil[7]);
-                        Image img8 = ImageIO.read(url);                                
-                        jblV8.setIcon(new ImageIcon(img8));
-                    } catch (Exception e) {
-                    }
+                    habilitarImagenes();
+                    URL url = this.getClass().getResource(infantil[0]);
+                    Image img1 = ImageIO.read(url);
+                    jblV1.setIcon(new ImageIcon(img1));
+                    url = this.getClass().getResource(infantil[1]);
+                    Image img2 = ImageIO.read(url);
+                    jblV2.setIcon(new ImageIcon(img2));
+                    url = this.getClass().getResource(infantil[2]);
+                    Image img3 = ImageIO.read(url);
+                    jblV3.setIcon(new ImageIcon(img3));
+                    url = this.getClass().getResource(infantil[3]);
+                    Image img4 = ImageIO.read(url);
+                    jblV4.setIcon(new ImageIcon(img4));
+                    url = this.getClass().getResource(infantil[4]);
+                    Image img5 = ImageIO.read(url);
+                    jblV5.setIcon(new ImageIcon(img5));
+                    url = this.getClass().getResource(infantil[5]);
+                    Image img6 = ImageIO.read(url);
+                    jblV6.setIcon(new ImageIcon(img6));
+                    url = this.getClass().getResource(infantil[6]);
+                    Image img7 = ImageIO.read(url);
+                    jblV7.setIcon(new ImageIcon(img7));
+                    url = this.getClass().getResource(infantil[7]);
+                    Image img8 = ImageIO.read(url);
+                    jblV8.setIcon(new ImageIcon(img8));
+                } catch (Exception e) {
+                }
                 break;
+
         }
-    }//GEN-LAST:event_jComboBox1ItemStateChanged
+    }//GEN-LAST:event_cmbGeneroItemStateChanged
 
     private void jblV1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV1MouseClicked
         // TODO add your handling code here:
@@ -559,8 +561,8 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void jblV8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jblV8MouseClicked
         // TODO add your handling code here:
-        GUI_Usuario usuario = new GUI_Usuario();
-        usuario.setVisible(true);
+        GUI_Sala sala = new GUI_Sala();
+        sala.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jblV8MouseClicked
 
@@ -649,42 +651,57 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-        String inicio = "  ======== 🦉 POLICINE 🦉 ========\n"+
-                "Unidades     Descripcion    PvP    Total";
-        String tipoSnack = (String) cmbTienda.getSelectedItem();
-        double precioSnack =0;
-        switch(tipoSnack){
-            case "Policanguil":
-                precioSnack = 3.50;
-                break;
-            case "Polinachos":
-                precioSnack = 4.00;
-                break;
-            case "Polipapas":
-                precioSnack = 2.50;
-                break;
-            case "Polibebidas":
-                precioSnack = 3.00;
-                break;
-            case "Polipollo":
-                precioSnack = 4.50;
-                break;
-            case "Polihotdog":
-                precioSnack = 1.50;
-                break;
-            case "Polidulces":
-                precioSnack = 2.50;
-                break;
-            case "Poliburguer":
-                precioSnack = 2.00;
-                break;
+
+        if (txtCantidad.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "Elija un producto");
+            
+        } else {            
+            String inicio = "  \n======== 🦉 POLICINE 🦉 ========\n"
+                    + "Unidades     Descripcion    PvP    Total";
+            tipoSnack = (String) cmbTienda.getSelectedItem();
+            
+            switch (tipoSnack) {
+                case "Policanguil":
+                    precioSnack = 3.50;
+                    break;
+                case "Polinachos":
+                    precioSnack = 4.00;
+                    break;
+                case "Polipapas":
+                    precioSnack = 2.50;
+                    break;
+                case "Polibebidas":
+                    precioSnack = 3.00;
+                    break;
+                case "Polipollo":
+                    precioSnack = 4.50;
+                    break;
+                case "Polihotdog":
+                    precioSnack = 1.50;
+                    break;
+                case "Polidulces":
+                    precioSnack = 2.50;
+                    break;
+                case "Poliburguer":
+                    precioSnack = 2.00;
+                    break;
+            }
+
+            unidadesProducto = Integer.parseInt(txtCantidad.getText());
+            totalAPagar = calcularTotal(unidadesProducto, precioSnack);
+            Snacks s = new Snacks(unidadesProducto, tipoSnack, precioSnack, totalAPagar);
+            txaPrecio.setText(txaPrecio.getText() + inicio + s.toString());
+            limpiarGUI();
+            
+            int aumentarProductos = JOptionPane.showConfirmDialog(rootPane, "   Registrado con éxito \n¿Desea seguir comprando?", "Mensaje", JOptionPane.YES_NO_OPTION);
+            if (aumentarProductos == 0) {
+            } else {
+                btnIngresar.setEnabled(true);
+                btnGuardar.setEnabled(false);
+                txtCantidad.setEnabled(false);
+            }
+
         }
-        
-        int unidades = Integer.parseInt(txtCantidad.getText());
-        double total = calcularTotal(unidades, precioSnack);
-        Snacks s = new Snacks(unidades, tipoSnack, precioSnack, total);
-        txaPrecio.setText(txaPrecio.getText()+inicio + s.toString());
-        limpiarGUI();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
@@ -742,16 +759,18 @@ public class GUI_Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel PoliSnacks;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnIngresar;
+    public javax.swing.JComboBox<String> cmbGenero;
     private javax.swing.JComboBox<String> cmbTienda;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jblCantidad;
+    private javax.swing.JLabel jblGenero;
     private javax.swing.JPanel jblInicio;
+    private javax.swing.JLabel jblPoliSnacks;
     private javax.swing.JLabel jblProductos;
     private javax.swing.JPanel jblTienda;
     private javax.swing.JLabel jblV1;

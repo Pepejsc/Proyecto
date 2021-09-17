@@ -8,6 +8,10 @@ import javax.swing.JOptionPane;
  */
 public class GUI_Usuario extends javax.swing.JFrame {
 
+    public static String nombre="";
+    public static String apellido="";
+    public static String cedula="";
+    
     /**
      * Creates new form GUI_Usuario
      */
@@ -26,22 +30,61 @@ public class GUI_Usuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtApellido = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtCedula = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         btnGenerarFactura = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
+        jblNombre = new javax.swing.JLabel();
+        jblApellido = new javax.swing.JLabel();
+        jblCedula = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
+        txtCedula = new javax.swing.JTextField();
+        jblDatosPersonales = new javax.swing.JLabel();
+        jblCedulaUsuario = new javax.swing.JLabel();
+
+        jLabel5.setText("jLabel5");
+
+        jLabel6.setText("jLabel6");
+
+        jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos Personales"));
+        btnGenerarFactura.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnGenerarFactura.setText("Generar Factura");
+        btnGenerarFactura.setEnabled(false);
+        btnGenerarFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarFacturaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGenerarFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
 
-        jLabel1.setText("Nombre");
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.setEnabled(false);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
+
+        jblNombre.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jblNombre.setText("Nombre");
+        getContentPane().add(jblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        jblApellido.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jblApellido.setText("Apellido");
+        getContentPane().add(jblApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
+
+        jblCedula.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jblCedula.setText("Cedula");
+        getContentPane().add(jblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,16 +96,14 @@ public class GUI_Usuario extends javax.swing.JFrame {
                 txtNombreKeyTyped(evt);
             }
         });
-
-        jLabel2.setText("Apellido");
+        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 111, -1));
 
         txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtApellidoKeyTyped(evt);
             }
         });
-
-        jLabel3.setText("Cedula");
+        getContentPane().add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 111, -1));
 
         txtCedula.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -74,106 +115,34 @@ public class GUI_Usuario extends javax.swing.JFrame {
                 txtCedulaKeyTyped(evt);
             }
         });
+        getContentPane().add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 111, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .addComponent(txtCedula, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNombre))
-                .addContainerGap(42, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(25, 25, 25))
-        );
+        jblDatosPersonales.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jblDatosPersonales.setText("Datos Personales");
+        getContentPane().add(jblDatosPersonales, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
 
-        btnGenerarFactura.setText("Generar Factura");
-        btnGenerarFactura.setEnabled(false);
-        btnGenerarFactura.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGenerarFacturaActionPerformed(evt);
-            }
-        });
-
-        btnGuardar.setText("Guardar");
-        btnGuardar.setEnabled(false);
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnGuardar)
-                        .addGap(36, 36, 36)
-                        .addComponent(btnGenerarFactura)
-                        .addGap(71, 71, 71))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGenerarFactura)
-                    .addComponent(btnGuardar))
-                .addGap(25, 25, 25))
-        );
+        jblCedulaUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario.jpg"))); // NOI18N
+        getContentPane().add(jblCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public void habilitarBotones(){//sobanepes steeven
-        if(!txtNombre.getText().isEmpty() && !txtApellido.getText().isEmpty() && !txtCedula.getText().isEmpty()){
+    public void habilitarBotones() {//sobanepes steeven
+        if (!txtNombre.getText().isEmpty() && !txtApellido.getText().isEmpty() && !txtCedula.getText().isEmpty()) {
             btnGuardar.setEnabled(true);
         }
     }
     private void btnGenerarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarFacturaActionPerformed
         // TODO add your handling code here:
-        GUI_Factura f1=new GUI_Factura();
+        GUI_Factura f1 = new GUI_Factura();
         JOptionPane.showMessageDialog(null, "Registro Exitoso..!!!");
         f1.setVisible(true);
-        this.setVisible(false);        
-        
+        this.setVisible(false);
     }//GEN-LAST:event_btnGenerarFacturaActionPerformed
 
     private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
         // TODO add your handling code here:
-        char validacion1=evt.getKeyChar();
-        if(Character.isDigit(validacion1)){
+        char validacion1 = evt.getKeyChar();
+        if (Character.isDigit(validacion1)) {
             getToolkit().beep();
             evt.consume();
             JOptionPane.showMessageDialog(rootPane, "Solo se permiten Letras");
@@ -223,12 +192,14 @@ public class GUI_Usuario extends javax.swing.JFrame {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
 
-        String nombre = txtNombre.getText();
-        String apellido = txtApellido.getText();
-        String cedula = txtCedula.getText();
-
+     
         Cedula miCedula = new Cedula();
+        nombre=txtNombre.getText();
+        apellido = txtApellido.getText();
+        cedula = txtCedula.getText();
+        
         Usuario miUsuario = new Usuario(nombre, apellido, cedula);
+        
         if (miCedula.esValida(txtCedula.getText())) {
             btnGenerarFactura.setEnabled(true);
 
@@ -237,11 +208,17 @@ public class GUI_Usuario extends javax.swing.JFrame {
             txtCedula.requestFocus();
         }
         
+    
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    @Override
+    public String toString() {
+        return "Nombre:" + txtApellido + " Apellido: " + txtNombre + " Cedula: " + txtNombre ;
+    }
 
    
     
@@ -283,12 +260,16 @@ public class GUI_Usuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGenerarFactura;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtCedula;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jblApellido;
+    private javax.swing.JLabel jblCedula;
+    private javax.swing.JLabel jblCedulaUsuario;
+    private javax.swing.JLabel jblDatosPersonales;
+    private javax.swing.JLabel jblNombre;
+    public javax.swing.JTextField txtApellido;
+    public javax.swing.JTextField txtCedula;
+    public javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
