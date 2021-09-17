@@ -12,7 +12,7 @@ import javax.swing.ImageIcon;
  */
 public class GUI_Main extends javax.swing.JFrame {
 
-    int contador=1;
+    int contador = 1;
     
     /**
      * Creates new form GUI_Main
@@ -26,7 +26,8 @@ public class GUI_Main extends javax.swing.JFrame {
     String ciencia[] = {"/imagenes/c1.jpg", "/imagenes/c2.jpg", "/imagenes/c3.jpg", "/imagenes/c4.jpg", "/imagenes/c5.jpg", "/imagenes/c6.jpg","/imagenes/c7.jpg","/imagenes/c8.jpg"};
     String musical[] = {"/imagenes/m1.jpeg", "/imagenes/m2.jpg", "/imagenes/m3.jpg", "/imagenes/m4.jpg", "/imagenes/m5.jpg", "/imagenes/m6.jpg","/imagenes/m7.jpg","/imagenes/m8.jpg"};
     String infantil[] = {"/imagenes/i1.jpg", "/imagenes/i2.png", "/imagenes/i3.jpg", "/imagenes/i4.jpg", "/imagenes/i5.jpg", "/imagenes/i6.jpg","/imagenes/i7.jpg","/imagenes/i8.jpg"};
-    String tienda [] = {};
+    String productosTienda[] = {"/imagenes/canguil.jpg","/imagenes/nachos.jpg","/imagenes/papas.png","/imagenes/bebida.jpg","/imagenes/Pollo.jpg","/imagenes/hotdog.jpg","/imagenes/chocolate.jpg","/imagenes/burguer.jpg"};
+    String precios[] = {"$3,50","$4,00","$2,50","$3,00","$4,50","$1,50","$2,50","$3,25"};
     
     public GUI_Main() {
         initComponents();
@@ -44,6 +45,10 @@ public class GUI_Main extends javax.swing.JFrame {
             return contador=0;
         }
         return contador--;
+    }
+    public void infoProducto(){
+        String info = "======== 🦉 POLICINE 🦉 ========\n"+"Unidades Descripcion PvP Total"; 
+        txaPrecio.setText(info);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -74,6 +79,8 @@ public class GUI_Main extends javax.swing.JFrame {
         btnIngresar = new javax.swing.JButton();
         jblProductos = new javax.swing.JLabel();
         cmbTienda = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txaPrecio = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -199,6 +206,11 @@ public class GUI_Main extends javax.swing.JFrame {
             }
         });
 
+        txaPrecio.setEditable(false);
+        txaPrecio.setColumns(20);
+        txaPrecio.setRows(5);
+        jScrollPane1.setViewportView(txaPrecio);
+
         javax.swing.GroupLayout jblTiendaLayout = new javax.swing.GroupLayout(jblTienda);
         jblTienda.setLayout(jblTiendaLayout);
         jblTiendaLayout.setHorizontalGroup(
@@ -208,20 +220,23 @@ public class GUI_Main extends javax.swing.JFrame {
                 .addComponent(PoliSnacks)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jblTiendaLayout.createSequentialGroup()
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbTienda, 0, 243, Short.MAX_VALUE))
                     .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(btnIngresar)))
+                        .addComponent(btnIngresar))
+                    .addGroup(jblTiendaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jblTiendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addComponent(btnDisminuirCanguil)
                         .addGap(26, 26, 26)
                         .addComponent(jblCanguil, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnAumentarCanguil))
                     .addComponent(jblProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68))
@@ -235,7 +250,9 @@ public class GUI_Main extends javax.swing.JFrame {
                         .addComponent(PoliSnacks)
                         .addGap(46, 46, 46)
                         .addComponent(cmbTienda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnIngresar))
                     .addGroup(jblTiendaLayout.createSequentialGroup()
                         .addGap(61, 61, 61)
@@ -586,68 +603,70 @@ public class GUI_Main extends javax.swing.JFrame {
     private void cmbTiendaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbTiendaItemStateChanged
         // TODO add your handling code here:
         String opcion = (String) cmbTienda.getSelectedItem();
+        URL url;
         switch(opcion){
             case "Policanguil":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
+                        url = this.getClass().getResource(productosTienda[0]);
                         Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        jblProductos.setIcon(new ImageIcon(img1));
+                        infoProducto();
                     } catch (Exception e) {
                     }
                 break;
             case "Polinachos":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[1]);
+                        Image img2 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img2));
                     } catch (Exception e) {
                     }
                 break;
             case "Polipapas":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[2]);
+                        Image img3 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img3));
                     } catch (Exception e) {
                     }
                 break;
             case "Polibebidas":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[3]);
+                        Image img4 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img4));
                     } catch (Exception e) {
                     }
                 break;
             case "Polipollo":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[4]);
+                        Image img5 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img5));
                     } catch (Exception e) {
                     }
                 break;
             case "Polihotdog":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[5]);
+                        Image img6 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img6));
                     } catch (Exception e) {
                     }
                 break;
             case "Polidulces":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[6]);
+                        Image img7 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img7));
                     } catch (Exception e) {
                     }
                 break;
             case "Poliburguer":
                 try {
-                        URL url = this.getClass().getResource(accion[0]);
-                        Image img1 = ImageIO.read(url);
-                        jblV1.setIcon(new ImageIcon(img1));
+                        url = this.getClass().getResource(productosTienda[7]);
+                        Image img8 = ImageIO.read(url);
+                        jblProductos.setIcon(new ImageIcon(img8));
                     } catch (Exception e) {
                     }
                 break;
@@ -700,6 +719,7 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbTienda;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jblCanguil;
     private javax.swing.JPanel jblInicio;
     private javax.swing.JLabel jblProductos;
@@ -713,5 +733,6 @@ public class GUI_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jblV7;
     private javax.swing.JLabel jblV8;
     public javax.swing.JTabbedPane jtbTienda;
+    private javax.swing.JTextArea txaPrecio;
     // End of variables declaration//GEN-END:variables
 }
