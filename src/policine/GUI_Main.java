@@ -19,7 +19,6 @@ public class GUI_Main extends javax.swing.JFrame {
     public static double precioSnack=0.0;
     public static double totalAPagar=0.0;
     
-    
     /**
      * Creates new form GUI_Main
      */
@@ -53,6 +52,7 @@ public class GUI_Main extends javax.swing.JFrame {
     public void limpiarGUI(){
         txtCantidad.setText("");
         cmbTienda.setSelectedIndex(0);
+        jblProductos.setIcon(null);
     }
  
     public void habilitarImagenes(){
@@ -651,10 +651,8 @@ public class GUI_Main extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-
         if (txtCantidad.getText().isEmpty()) {
             JOptionPane.showMessageDialog(rootPane, "Elija un producto");
-            
         } else {            
             String inicio = "  \n======== 🦉 POLICINE 🦉 ========\n"
                     + "Unidades     Descripcion    PvP    Total";
@@ -686,14 +684,13 @@ public class GUI_Main extends javax.swing.JFrame {
                     precioSnack = 2.00;
                     break;
             }
-
             unidadesProducto = Integer.parseInt(txtCantidad.getText());
             totalAPagar = calcularTotal(unidadesProducto, precioSnack);
             Snacks s = new Snacks(unidadesProducto, tipoSnack, precioSnack, totalAPagar);
             txaPrecio.setText(txaPrecio.getText() + inicio + s.toString());
             limpiarGUI();
             
-            int aumentarProductos = JOptionPane.showConfirmDialog(rootPane, "   Registrado con éxito \n¿Desea seguir comprando?", "Mensaje", JOptionPane.YES_NO_OPTION);
+            int aumentarProductos = JOptionPane.showConfirmDialog(rootPane, "¿Desea seguir comprando?", "Mensaje", JOptionPane.YES_NO_OPTION);
             if (aumentarProductos == 0) {
             } else {
                 btnIngresar.setEnabled(true);

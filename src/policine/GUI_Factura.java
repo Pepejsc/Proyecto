@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package policine;
 
 import javax.swing.JOptionPane;
@@ -21,23 +17,38 @@ public class GUI_Factura extends javax.swing.JFrame{
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Factura");
-        Factura f1 = new Factura();
-
-        String infoUsuario = "\nCliente: " + GUI_Usuario.nombre + " " + GUI_Usuario.apellido
-                + "\tCedula: " + GUI_Usuario.cedula;
-
-        String infoSnacks = "\n\nUNIDADES                DETALLE           PvP         TOTAL"
-                + "\n ========================================================="
-                + "\n         " + GUI_Main.unidadesProducto
-                + "                   " + GUI_Main.tipoSnack
-                + "           $" + GUI_Main.precioSnack + "          $" + GUI_Main.totalAPagar;
-
-        txaDatosFactura.setText(txaDatosFactura.getText()+"======================== POLICINE ========================\n"
-                + f1.mostrarFecha() + infoUsuario + infoSnacks);
-
-
+        imprimirFactura();
     }
+    public void imprimirFactura(){
+        Factura f1 = new Factura();
+            String infoUsuario = "\nCliente: " + GUI_Usuario.nombre + " " + GUI_Usuario.apellido
+                    + "\tCedula: " + GUI_Usuario.cedula;
 
+            String infoSala = "\n\n#BOLETOS     TIPOSALA    #SALA       #BUTACA     TOTAL"
+                    + "\n ========================================================="
+                    + "\n         " + GUI_Sala.numeroEntradas
+                    + "                   " + GUI_Sala.tipoSala
+                    +"\t"+ asignarSala() +"\t"+ asignarButaca() +"          $" +GUI_Sala.precioTotal;
+
+            String infoSnacks = "\n\nUNIDADES                DETALLE           PvP         TOTAL"
+                    + "\n ========================================================="
+                    + "\n         " + GUI_Main.unidadesProducto
+                    + "                   " + GUI_Main.tipoSnack
+                    + "           $" + GUI_Main.precioSnack + "          $" + GUI_Main.totalAPagar;
+
+            txaDatosFactura.setText(txaDatosFactura.getText() + "======================== POLICINE ========================\n"
+                    + f1.mostrarFecha()  + infoUsuario + infoSala + infoSnacks);
+    }
+    
+    public int asignarButaca(){
+       int numero1=(int)(Math.random()*30+1);
+       return  numero1;
+    }
+    
+    public int asignarSala(){
+       int numero2=(int)(Math.random()*10+1);
+       return  numero2;
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,19 +65,20 @@ public class GUI_Factura extends javax.swing.JFrame{
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jblFactura.setFont(new java.awt.Font("Elephant", 1, 24)); // NOI18N
         jblFactura.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jblFactura.setText("FACTURA");
-        getContentPane().add(jblFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 474, 65));
+        getContentPane().add(jblFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 474, 65));
 
         txaDatosFactura.setEditable(false);
         txaDatosFactura.setColumns(20);
         txaDatosFactura.setRows(5);
         jScrollPane1.setViewportView(txaDatosFactura);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 420, 430));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 440, 430));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/factura.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 560));

@@ -86,11 +86,6 @@ public class GUI_Usuario extends javax.swing.JFrame {
         jblCedula.setText("Cedula");
         getContentPane().add(jblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, -1));
 
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
-            }
-        });
         txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNombreKeyTyped(evt);
@@ -105,11 +100,6 @@ public class GUI_Usuario extends javax.swing.JFrame {
         });
         getContentPane().add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 111, -1));
 
-        txtCedula.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txtCedulaFocusLost(evt);
-            }
-        });
         txtCedula.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCedulaKeyTyped(evt);
@@ -134,7 +124,7 @@ public class GUI_Usuario extends javax.swing.JFrame {
     private void btnGenerarFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarFacturaActionPerformed
         // TODO add your handling code here:
         GUI_Factura f1 = new GUI_Factura();
-        JOptionPane.showMessageDialog(null, "Registro Exitoso..!!!");
+        JOptionPane.showMessageDialog(null, "Datos Guardados Correctamente!!!");
         f1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnGenerarFacturaActionPerformed
@@ -173,31 +163,15 @@ public class GUI_Usuario extends javax.swing.JFrame {
                 evt.consume();
                 getToolkit().beep();
         }
-              
-        
-        
+        habilitarBotones();
     }//GEN-LAST:event_txtCedulaKeyTyped
-
-    private void txtCedulaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtCedulaFocusLost
-        // TODO add your handling code here:
-        Cedula miCedula=new Cedula();
-        if(miCedula.esValida(txtCedula.getText())){
-            habilitarBotones();
-        } else{
-            JOptionPane.showMessageDialog(null,"Cedula Incorrecta!!!");
-            txtCedula.requestFocus();
-        }
-    }//GEN-LAST:event_txtCedulaFocusLost
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-
-     
         Cedula miCedula = new Cedula();
         nombre=txtNombre.getText();
         apellido = txtApellido.getText();
         cedula = txtCedula.getText();
-        
         Usuario miUsuario = new Usuario(nombre, apellido, cedula);
         
         if (miCedula.esValida(txtCedula.getText())) {
@@ -211,17 +185,6 @@ public class GUI_Usuario extends javax.swing.JFrame {
     
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
-
-    @Override
-    public String toString() {
-        return "Nombre:" + txtApellido + " Apellido: " + txtNombre + " Cedula: " + txtNombre ;
-    }
-
-   
-    
     /**
      * @param args the command line arguments
      */

@@ -7,8 +7,10 @@ import javax.swing.JOptionPane;
  */
 public class GUI_Sala extends javax.swing.JFrame {
 
-    public static String tipoSala="";
-    public static int numeroEntradas=0;
+    public static String tipoSala = "";
+    public static double precioTotal ;
+    public static int numeroEntradas = 0;
+    public static int opcion;
     /**
      * Creates new form GUI_Sala
      */
@@ -31,12 +33,10 @@ public class GUI_Sala extends javax.swing.JFrame {
         btgTipoSala = new javax.swing.ButtonGroup();
         btgHorarios = new javax.swing.ButtonGroup();
         jblTipoSala = new javax.swing.JLabel();
-        btnTickets = new javax.swing.JButton();
         jblIngresoTickets = new javax.swing.JLabel();
         jblHorarios = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtNumTickets = new javax.swing.JTextPane();
-        btnIngresar = new javax.swing.JButton();
         btnRetroceder = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
         rbtSala2D = new javax.swing.JRadioButton();
@@ -57,9 +57,6 @@ public class GUI_Sala extends javax.swing.JFrame {
         jblTipoSala.setText("Tipo de Sala:");
         getContentPane().add(jblTipoSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 
-        btnTickets.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ticket.png"))); // NOI18N
-        getContentPane().add(btnTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 60, 30));
-
         jblIngresoTickets.setFont(new java.awt.Font("Elephant", 0, 14)); // NOI18N
         jblIngresoTickets.setText("Ingrese los números de tickets:");
         getContentPane().add(jblIngresoTickets, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
@@ -75,17 +72,7 @@ public class GUI_Sala extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(txtNumTickets);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 60, 30));
-
-        btnIngresar.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
-        btnIngresar.setText("Datos Cliente");
-        btnIngresar.setEnabled(false);
-        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 120, 30));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 60, 30));
 
         btnRetroceder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/back.png"))); // NOI18N
         btnRetroceder.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +80,7 @@ public class GUI_Sala extends javax.swing.JFrame {
                 btnRetrocederActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRetroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 50, 30));
+        getContentPane().add(btnRetroceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 50, 30));
 
         btnGuardar.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
         btnGuardar.setText("Guardar");
@@ -102,7 +89,7 @@ public class GUI_Sala extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 90, 30));
+        getContentPane().add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 90, 30));
 
         btgTipoSala.add(rbtSala2D);
         rbtSala2D.setFont(new java.awt.Font("Elephant", 0, 12)); // NOI18N
@@ -142,7 +129,7 @@ public class GUI_Sala extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+  
     public void generarHora(){
         
         int digito1 = (int)(Math.random()*10);
@@ -167,14 +154,6 @@ public class GUI_Sala extends javax.swing.JFrame {
             return false;
         }
     }
-    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-        // TODO add your handling code here:
-           GUI_Usuario p1 =new GUI_Usuario();
-           p1.setVisible(true);
-           this.setVisible(false);
-        
-    }//GEN-LAST:event_btnIngresarActionPerformed
-
     private void btnRetrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetrocederActionPerformed
         // TODO add your handling code here:
         GUI_Main v1 = new GUI_Main();
@@ -187,31 +166,26 @@ public class GUI_Sala extends javax.swing.JFrame {
         if(habilitarBotones() == false){
             JOptionPane.showMessageDialog(null, "Debe inrgesar todos los campos");
         }else{
-            int opcion = JOptionPane.showConfirmDialog(rootPane, "¿Desea ir a la Tienda?", "Mensaje", JOptionPane.YES_NO_OPTION);
-            if (opcion == 0) {
+            GUI_Main m1 = new GUI_Main();
+            m1.setVisible(true);
+            m1.jtbTienda.setEnabledAt(0, false);
+            m1.jtbTienda.setEnabledAt(1, true);
+            m1.cmbGenero.setEnabled(false);
+            this.setVisible(false);
+            if (rbtSala2D.isSelected()) {
+                tipoSala = "Sala 2D";
+                numeroEntradas = Integer.parseInt(txtNumTickets.getText());
+                precioTotal = numeroEntradas * 4.50;
 
-                GUI_Main m1 = new GUI_Main();
-                m1.setVisible(true);
-                m1.jtbTienda.setEnabledAt(0, false);
-                m1.jtbTienda.setEnabledAt(1, true);
-                m1.cmbGenero.setEnabled(false);
-                this.setVisible(false);
-                
-                if(rbtSala2D.isSelected()){
-                    tipoSala="Sala 2D";
-                }else{
-                
-                    tipoSala="Sala 3D";
-                }
-                
-                numeroEntradas=Integer.parseInt(txtNumTickets.getText());
-                
-                
-                
             } else {
-                btnIngresar.setEnabled(true);
+                tipoSala = "Sala 3D";
+                numeroEntradas = Integer.parseInt(txtNumTickets.getText());
+                precioTotal = numeroEntradas * 4.50;
             }
-       }
+            Sala s1 = new Sala(tipoSala, numeroEntradas, precioTotal);
+
+        }
+            
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void txtNumTicketsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumTicketsKeyTyped
@@ -263,9 +237,7 @@ public class GUI_Sala extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btgHorarios;
     private javax.swing.ButtonGroup btgTipoSala;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnRetroceder;
-    private javax.swing.JButton btnTickets;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
